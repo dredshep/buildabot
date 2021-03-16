@@ -10,6 +10,9 @@
 	<!--<![endif]-->
 	<head>
 		<meta charset="UTF-8">
+		<!--Begin Comment Out
+		<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-cff49190019d29d717a",applicationID:"241438284"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(6),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(y,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1198.min.js"},h=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:w,features:{},xhrWrappable:h,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var x=0},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(7),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+		End Comment Out-->
 		<meta name="viewport" content="width=device-width">
 		<title>buildabot.gg - Custom Discord & Telegram Bots</title>
 		<!--Favicons -->
@@ -21,49 +24,57 @@
 		<meta name="msapplication-TileColor" content="#28004d">
 		<meta name="theme-color" content="#28004d">
 		<!-- End Favicons -->
-		<meta name="description" content="buildabot is a way for Telegram and Discord server owners to launch amazing bots that automate day-to-day tasks, reducing time spent and helping you earn more money!">
-		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-		<link rel="canonical" href="https://buildabot.gg/">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="buildabot - The BEST Telegram + Discord Bots!">
-		<meta property="og:description" content="buildabot offers the best Telegram and Discord bots. Server owners, launch amazing bots that automate day-to-day tasks, reducing time spent and helping you earn more money.">
-		<meta property="og:url" content="https://buildabot.gg/">
-		<meta property="og:site_name" content="buildabot">
-		<meta property="og:image" content="images/Website-Share-Social-Image.jpg">
-		<meta property="og:image:secure_url" content="images/Website-Share-Social-Image.jpg">
-		<meta property="og:image:width" content="1200">
-		<meta property="og:image:height" content="630">
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:description" content="buildabot offers the best Telegram and Discord bots. Server owners, launch amazing bots that automate day-to-day tasks, reducing time spent and helping you earn more money.">
-		<meta name="twitter:title" content="buildabot - The BEST Telegram + Discord Bots!">
-		<meta name="twitter:image" content="https://buildabot.io/wp-content/uploads/2019/10/Website-Share-Social-Image.jpg">
+		<link rel="preload" href="https://heap.io/wp-content/themes/rs_theme/assets/js/main.js?ver=210315-193151" as="script">
+<link rel="preload" href="https://heap.io/wp-content/themes/rs_theme/assets/css/main.css?ver=210315-193149" as="style">
+<!-- This site is optimized with the Yoast SEO Premium plugin v12.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Heap is a smarter way to do Product Analytics, giving PMs autocaptured, actionable customer data for true product innovation.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://heap.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="A Smarter Approach to Product Analytics">
+<meta property="og:description" content="Heap is a smarter way to do Product Analytics, giving PMs autocaptured, actionable customer data for true product innovation.">
+<meta property="og:url" content="https://heap.io/">
+<meta property="og:site_name" content="Heap">
+<meta property="og:image" content="images/Website-Share-Social-Image.jpg">
+<meta property="og:image:secure_url" content="images/Website-Share-Social-Image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Heap is a smarter way to do Product Analytics, giving PMs autocaptured, actionable customer data for true product innovation.">
+<meta name="twitter:title" content="A Smarter Approach to Product Analytics">
+<meta name="twitter:image" content="https://heap.io/wp-content/uploads/2019/10/Website-Share-Social-Image.jpg">
+<meta name="google-site-verification" content="T7-_HPjRW_X8VcMgogUNrn8kzKe_H-FRdOWqtncWPyY">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://heap.io/#website","url":"https://heap.io/","name":"Heap","potentialAction":{"@type":"SearchAction","target":"https://heap.io/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://heap.io/#primaryimage","url":"https://heap.io/wp-content/uploads/2020/11/Website-Share-Social-Image.jpg","width":1200,"height":630},{"@type":"WebPage","@id":"https://heap.io/#webpage","url":"https://heap.io/","inLanguage":"en-US","name":"Heap - A Smarter Approach to Product","isPartOf":{"@id":"https://heap.io/#website"},"primaryImageOfPage":{"@id":"https://heap.io/#primaryimage"},"datePublished":"2020-03-20T16:04:41-07:00","dateModified":"2021-03-11T16:08:37-08:00","description":"Heap is a smarter way to do Product Analytics, giving PMs autocaptured, actionable customer data for true product innovation."}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
 
-<link rel="dns-prefetch" href="//buildabot.io">
-
-
+<link rel="dns-prefetch" href="//heap.io">
+<link rel="dns-prefetch" href="//cdn.bizible.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="Heap &raquo; Feed" href="https://heap.io/feed">
+<link rel="alternate" type="application/rss+xml" title="Heap &raquo; Comments Feed" href="https://heap.io/comments/feed">
 <link rel="stylesheet" id="pilot-style-css-css" href="css/frontend.css" type="text/css" media="all">
 <link rel="stylesheet" id="theme_css-css" href="css/main.css" type="text/css" media="all">
 <script type="text/javascript" src="js/bizible.js"></script>
-<link rel="https://api.w.org/" href="https://buildabot.io/9otwdsvj1z-25gy9e0qr0/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://buildabot.io/xmlrpc.php?rsd">
-<link rel="shortlink" href="https://buildabot.io/">
-<link rel="alternate" type="application/json+oembed" href="https://buildabot.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fbuildabot.io%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://buildabot.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fbuildabot.io%2F&#038;format=xml">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="https://api.w.org/" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://heap.io/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://heap.io/">
+<link rel="alternate" type="application/json+oembed" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fheap.io%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fheap.io%2F&#038;format=xml">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff2" type="font/woff2" crossorigin="anonymous">
 
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://buildabot.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff2" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff" type="font/woff" crossorigin="anonymous">
+	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff2" type="font/woff2" crossorigin="anonymous">
 		</head>
 	<body class="home page-template-default page page-id-10633 wp-schema-pro-1.3.1 unknown home-2">
 <div id="page" class="site">
@@ -72,11 +83,11 @@
 
 <div class="hello-bar">
 	<div class="rs-container rs-container--container">
-		<a href="https://buildabot.io/webinar-live-weekly-demo" target="_self">
-							<span class="rs-tag">Build YOUR Bot</span>
+		<a href="https://heap.io/webinar-live-weekly-demo" target="_self">
+							<span class="rs-tag">Weekly Live Demo</span>
 						<p class="rs-paragraph style--alternate">
-				<strong>Contact us today to buy your customized Discord or Telegram bot</strong>
-				<a class="rs-link style--link-arrow" href="https://buildabot.io/webinar-live-weekly-demo" target="_self">Contact Us Now</a>
+				<strong>Join us every Thursday for a weekly live demo of Heap</strong>
+				<a class="rs-link style--link-arrow" href="https://heap.io/webinar-live-weekly-demo" target="_self">Register Now</a>
 			</p>
 		</a>
 	</div>
@@ -85,122 +96,122 @@
 <header id="masthead" class="site-header">
 	<div class="rs-container rs-container--container">
 		<nav id="site-navigation" class="main-navigation">
-			<a href="https://buildabot.io/" title="buildabot" class="main-navigation__logo">
-				<img src="fonts/buildabot-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
-			<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li id="menu-item-9273" class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://buildabot.io/product/product-analytics">Product</a>
+			<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
+				<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
+			<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li id="menu-item-9273" class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://heap.io/product/product-analytics">Product</a>
 <ul class="submenu" role="menu">
 	<li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-272"><div title="Foundation" href="#">Foundation</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://buildabot.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
+		<li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://heap.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
 </li>
-		<li id="menu-item-12959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://buildabot.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
+		<li id="menu-item-12959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://heap.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
 </li>
-		<li id="menu-item-12960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://buildabot.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
+		<li id="menu-item-12960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://heap.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
 </li>
 </ul>
 </li>
-	<li id="menu-item-12956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="buildabot Data Engine" href="https://buildabot.io/buildabot-data-engine">buildabot Data Engine</div>
+	<li id="menu-item-12956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="Heap Data Engine" href="https://heap.io/heap-data-engine">Heap Data Engine</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-12961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://buildabot.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
+		<li id="menu-item-12961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://heap.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
 </li>
-		<li id="menu-item-12958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://buildabot.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
+		<li id="menu-item-12958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://heap.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
 </li>
-		<li id="menu-item-12957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://buildabot.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
+		<li id="menu-item-12957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://heap.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
 </li>
-		<li id="menu-item-10306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://buildabot.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
+		<li id="menu-item-10306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://heap.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
 </li>
 </ul>
 </li>
 	<li id="menu-item-273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-273"><div title="Product Analytics" href="#">Product Analytics</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://buildabot.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
+		<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://heap.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
 </li>
-		<li id="menu-item-13852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://buildabot.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
+		<li id="menu-item-13852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://heap.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
 </li>
-		<li id="menu-item-10416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://buildabot.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
-</li>
-</ul>
+		<li id="menu-item-10416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://heap.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
 </li>
 </ul>
 </li>
-<li id="menu-item-15068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://buildabot.io/buildabot-for-saas">Solutions</a>
+</ul>
+</li>
+<li id="menu-item-15068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://heap.io/heap-for-saas">Solutions</a>
 <ul class="submenu" role="menu">
 	<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-164"><div title="Use Cases" href="#">Use Cases</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://buildabot.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
+		<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
 </li>
-		<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://buildabot.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
+		<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://heap.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
 </li>
-		<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://buildabot.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
+		<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://heap.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
 </li>
-		<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://buildabot.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
+		<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://heap.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
 </li>
 </ul>
 </li>
-	<li id="menu-item-14476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://buildabot.io/industries">Industries</div>
+	<li id="menu-item-14476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://heap.io/industries">Industries</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-14536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="buildabot for SaaS" href="https://buildabot.io/buildabot-for-saas">buildabot for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
+		<li id="menu-item-14536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="Heap for SaaS" href="https://heap.io/heap-for-saas">Heap for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
 </li>
-		<li id="menu-item-13181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="buildabot for Ecommerce and D2C" href="https://buildabot.io/buildabot-for-ecommerce">buildabot for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
+		<li id="menu-item-13181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="Heap for Ecommerce and D2C" href="https://heap.io/heap-for-ecommerce">Heap for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
 </li>
-		<li id="menu-item-14472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="buildabot for Financial Services" href="https://buildabot.io/buildabot-for-financial-services">buildabot for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
-</li>
-</ul>
+		<li id="menu-item-14472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="Heap for Financial Services" href="https://heap.io/heap-for-financial-services">Heap for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
 </li>
 </ul>
 </li>
-<li id="menu-item-128" class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why buildabot" href="/why-product-analytics">Why buildabot</a>
+</ul>
+</li>
+<li id="menu-item-128" class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why Heap" href="/why-product-analytics">Why Heap</a>
 <ul class="submenu" role="menu">
-	<li id="menu-item-15069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why buildabot?" href="#">Why buildabot?</div>
+	<li id="menu-item-15069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why Heap?" href="#">Why Heap?</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-10539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://buildabot.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
+		<li id="menu-item-10539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://heap.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
 </li>
 </ul>
 </li>
-	<li id="menu-item-15070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="buildabot vs Competitors" href="#">buildabot vs Competitors</div>
+	<li id="menu-item-15070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="Heap vs Competitors" href="#">Heap vs Competitors</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-12190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How buildabot compares" href="https://buildabot.io/compare">How buildabot compares<p class="menu-item-description ">Why buildabot is the superior alternative</p></a>
+		<li id="menu-item-12190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How Heap compares" href="https://heap.io/compare">How Heap compares<p class="menu-item-description ">Why Heap is the superior alternative</p></a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://buildabot.io/customers">Customer Stories</a>
+<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://heap.io/customers">Customer Stories</a>
 </li>
-<li id="menu-item-10301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://buildabot.io/pricing">Pricing</a>
+<li id="menu-item-10301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://heap.io/pricing">Pricing</a>
 </li>
 <li id="menu-item-9334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9334"><a title="Resources" href="/resources">Resources</a>
 <ul class="submenu" role="menu">
 	<li id="menu-item-9046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9046"><div title="Learn More" href="#">Learn More</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-9047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://buildabot.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
+		<li id="menu-item-9047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://heap.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
 </li>
-		<li id="menu-item-14488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://buildabot.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
+		<li id="menu-item-14488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://heap.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
 </li>
 		<li id="menu-item-12360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12360"><a title="Events" href="/events">Events<p class="menu-item-description ">Virtual events and group demos</p></a>
 </li>
-		<li id="menu-item-9050" class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://buildabot.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
+		<li id="menu-item-9050" class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://heap.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
 </p></a>
 </li>
 </ul>
 </li>
-	<li id="menu-item-15471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://buildabot.io/partners">Our Partners</div>
+	<li id="menu-item-15471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://heap.io/partners">Our Partners</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-15472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="buildabot Partners Network" href="https://buildabot.io/partners">buildabot Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
+		<li id="menu-item-15472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="Heap Partners Network" href="https://heap.io/partners">Heap Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
 </li>
 </ul>
 </li>
 	<li id="menu-item-9052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9052"><div title="Help Center" href="#">Help Center</div>
 	<ul class="submenu" role="menu">
-		<li id="menu-item-9051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.buildabot.io/">Help Center<p class="menu-item-description ">How to use buildabot</p></a>
+		<li id="menu-item-9051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.heap.io/">Help Center<p class="menu-item-description ">How to use Heap</p></a>
 </li>
-		<li id="menu-item-10758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="buildabot University" href="https://learn.buildabot.io/">buildabot University<p class="menu-item-description ">Video tutorials</p></a>
-</li>
-</ul>
+		<li id="menu-item-10758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="Heap University" href="https://learn.heap.io/">Heap University<p class="menu-item-description ">Video tutorials</p></a>
 </li>
 </ul>
 </li>
-</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://buildabot.io/contact-sales">Contact Us</a></li>
+</ul>
+</li>
+</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://heap.io/contact-sales">Contact Us</a></li>
 <li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="/login">Log In</a></li>
 <li id="menu-item-135" class="nav-cta menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="/free-trial"><span class="inner-button"><svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -213,130 +224,130 @@
 </ul></div>		</nav><!-- .main-navigation -->
 
 		<nav id="site-navigation-mobile" class="main-navigation-mobile">
-				<a href="https://buildabot.io/" title="buildabot" class="main-navigation__logo">
-					<img src="fonts/buildabot-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
+				<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
+					<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
 				<div class="main-navigation-mobile__container-mobile">
 					<span class="icon-Nav-Mobile---Menu"></span>Menu
 				</div>
 				<div id="mobile-menu" class="main-navigation-mobile__mobile-menu">
-				<a href="https://buildabot.io/" title="buildabot" class="main-navigation__logo">
-					<img src="fonts/buildabot-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
+				<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
+					<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
 				<a href="javascript:void(0)" class="main-navigation-mobile__mobile-menu__closebtn"><span class="icon-Nav-Mobile---X"></span></a>
 				<div class="main-navigation-mobile__mobile-menu__container">
-				<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://buildabot.io/product/product-analytics">Product</a>
+				<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://heap.io/product/product-analytics">Product</a>
 <ul class="submenu" role="menu">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-272"><div title="Foundation" href="#">Foundation</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://buildabot.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://heap.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://buildabot.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://heap.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://buildabot.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://heap.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
 </li>
 </ul>
 </li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="buildabot Data Engine" href="https://buildabot.io/buildabot-data-engine">buildabot Data Engine</div>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="Heap Data Engine" href="https://heap.io/heap-data-engine">Heap Data Engine</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://buildabot.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://heap.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://buildabot.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://heap.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://buildabot.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://heap.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://buildabot.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://heap.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
 </li>
 </ul>
 </li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-273"><div title="Product Analytics" href="#">Product Analytics</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://buildabot.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://heap.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://buildabot.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://heap.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://buildabot.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
-</li>
-</ul>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://heap.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
 </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://buildabot.io/buildabot-for-saas">Solutions</a>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://heap.io/heap-for-saas">Solutions</a>
 <ul class="submenu" role="menu">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-164"><div title="Use Cases" href="#">Use Cases</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://buildabot.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://buildabot.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://heap.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://buildabot.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://heap.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://buildabot.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://heap.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
 </li>
 </ul>
 </li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://buildabot.io/industries">Industries</div>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://heap.io/industries">Industries</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="buildabot for SaaS" href="https://buildabot.io/buildabot-for-saas">buildabot for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="Heap for SaaS" href="https://heap.io/heap-for-saas">Heap for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="buildabot for Ecommerce and D2C" href="https://buildabot.io/buildabot-for-ecommerce">buildabot for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="Heap for Ecommerce and D2C" href="https://heap.io/heap-for-ecommerce">Heap for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="buildabot for Financial Services" href="https://buildabot.io/buildabot-for-financial-services">buildabot for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
-</li>
-</ul>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="Heap for Financial Services" href="https://heap.io/heap-for-financial-services">Heap for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
 </li>
 </ul>
 </li>
-<li class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why buildabot" href="/why-product-analytics">Why buildabot</a>
+</ul>
+</li>
+<li class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why Heap" href="/why-product-analytics">Why Heap</a>
 <ul class="submenu" role="menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why buildabot?" href="#">Why buildabot?</div>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why Heap?" href="#">Why Heap?</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://buildabot.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://heap.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
 </li>
 </ul>
 </li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="buildabot vs Competitors" href="#">buildabot vs Competitors</div>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="Heap vs Competitors" href="#">Heap vs Competitors</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How buildabot compares" href="https://buildabot.io/compare">How buildabot compares<p class="menu-item-description ">Why buildabot is the superior alternative</p></a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How Heap compares" href="https://heap.io/compare">How Heap compares<p class="menu-item-description ">Why Heap is the superior alternative</p></a>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://buildabot.io/customers">Customer Stories</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://heap.io/customers">Customer Stories</a>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://buildabot.io/pricing">Pricing</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://heap.io/pricing">Pricing</a>
 </li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9334"><a title="Resources" href="/resources">Resources</a>
 <ul class="submenu" role="menu">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9046"><div title="Learn More" href="#">Learn More</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://buildabot.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://heap.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
 </li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://buildabot.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://heap.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
 </li>
 		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12360"><a title="Events" href="/events">Events<p class="menu-item-description ">Virtual events and group demos</p></a>
 </li>
-		<li class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://buildabot.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
+		<li class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://heap.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
 </p></a>
 </li>
 </ul>
 </li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://buildabot.io/partners">Our Partners</div>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://heap.io/partners">Our Partners</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="buildabot Partners Network" href="https://buildabot.io/partners">buildabot Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="Heap Partners Network" href="https://heap.io/partners">Heap Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
 </li>
 </ul>
 </li>
 	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9052"><div title="Help Center" href="#">Help Center</div>
 	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.buildabot.io/">Help Center<p class="menu-item-description ">How to use buildabot</p></a>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.heap.io/">Help Center<p class="menu-item-description ">How to use Heap</p></a>
 </li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="buildabot University" href="https://learn.buildabot.io/">buildabot University<p class="menu-item-description ">Video tutorials</p></a>
-</li>
-</ul>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="Heap University" href="https://learn.heap.io/">Heap University<p class="menu-item-description ">Video tutorials</p></a>
 </li>
 </ul>
 </li>
-</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://buildabot.io/contact-sales">Contact Us</a></li>
+</ul>
+</li>
+</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://heap.io/contact-sales">Contact Us</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="/login">Log In</a></li>
 <li class="nav-cta menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="/free-trial"><span class="inner-button"><svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -356,7 +367,7 @@
 
 	<main id="main" class="site-main">
 
-		<section id="cta-iktltvot1o8-kkswcb67" class="rs-section block block-cta block-cta--short " style="margin-bottom: -18%; z-index:2" "=""><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h1 id="" class="rs-heading style--primary ">A Smarter Approach to Product</h1><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">buildabot is an analytics platform that helps product, marketing, and customer success teams craft exceptional digital experiences that convert and retain users.<br><br>We give you all of your customer data — automatically — and the tools to turn that data into action.</p><a id="" class="rs-link style--primary " target="_self" href="/free-trial">
+		<section id="cta-iktltvot1o8-kkswcb67" class="rs-section block block-cta block-cta--short " style="margin-bottom: -18%; z-index:2" "=""><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h1 id="" class="rs-heading style--primary ">A Smarter Approach to Product</h1><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap is an analytics platform that helps product, marketing, and customer success teams craft exceptional digital experiences that convert and retain users.<br><br>We give you all of your customer data — automatically — and the tools to turn that data into action.</p><a id="" class="rs-link style--primary " target="_self" href="/free-trial">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -389,7 +400,7 @@
 
 <div id="bm"></div>
 <script src="js/lottie.min.js"></script>
-<script src="js/buildabothero.js"></script>
+<script src="js/heaphero.js"></script>
 <style type="text/css">
 #bm {
 min-height: 385px; }
@@ -399,21 +410,21 @@ min-height: 385px; }
 </style>
 
 
-<section class="rs-section block block-logo-band block-logo-band--purple"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--secondary ">Over 6,000 companies build better products with buildabot</h2><div class="rs-container has-6-columns mobile-landscape-has-3-columns mobile-portrait-has-2-columns"><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/twilio-white-350w-300x99.png.webp 300w, images/twilio-white-350w-150x115.png.webp 150w, images/twilio-white-350w.png.webp 350w"><source srcset="images/twilio-white-350w-300x99.png 300w, images/twilio-white-350w-150x115.png 150w, images/twilio-white-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/twilio-white-350w.png">
+<section class="rs-section block block-logo-band block-logo-band--purple"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--secondary ">Over 6,000 companies build better products with Heap</h2><div class="rs-container has-6-columns mobile-landscape-has-3-columns mobile-portrait-has-2-columns"><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/twilio-white-350w-300x99.png.webp 300w, images/twilio-white-350w-150x115.png.webp 150w, images/twilio-white-350w.png.webp 350w"><source srcset="images/twilio-white-350w-300x99.png 300w, images/twilio-white-350w-150x115.png 150w, images/twilio-white-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/twilio-white-350w.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/twilio-red-350w-300x98.png.webp 300w, images/twilio-red-350w-150x114.png.webp 150w, images/twilio-red-350w.png.webp 350w"><source srcset="images/twilio-red-350w-300x98.png 300w, images/twilio-red-350w-150x114.png 150w, images/twilio-red-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/twilio-red-350w.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/esurance-350w-300x139.png.webp 300w, images/esurance-350w-150x150.png.webp 150w, images/esurance-350w.png.webp 350w"><source srcset="images/esurance-350w-300x139.png 300w, images/esurance-350w-150x150.png 150w, images/esurance-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/esurance-350w.png">
+            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/esurance-350w-300x139.png.webp 300w, images/esurance-350w-150x150.png.webp 150w, images/esurance-350w.png.webp 350w"><source srcset="images/esurance-350w-300x139.png 300w, images/esurance-350w-150x150.png 150w, images/esurance-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/esurance-350w.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/esurance-red-350w-300x139.png.webp 300w, images/esurance-red-350w-150x150.png.webp 150w, images/esurance-red-350w.png.webp 350w"><source srcset="images/esurance-red-350w-300x139.png 300w, images/esurance-red-350w-150x150.png 150w, images/esurance-red-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/esurance-red-350w.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/cloudflare-1-300x90.png.webp 300w, images/cloudflare-1-150x150.png.webp 150w, images/cloudflare-1-768x229.png.webp 768w, images/cloudflare-1.png.webp 874w"><source srcset="images/cloudflare-1-300x90.png 300w, images/cloudflare-1-150x150.png 150w, images/cloudflare-1-768x229.png 768w, images/cloudflare-1.png 874w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/cloudflare-1.png">
+            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/cloudflare-1-300x90.png.webp 300w, images/cloudflare-1-150x150.png.webp 150w, images/cloudflare-1-768x229.png.webp 768w, images/cloudflare-1.png.webp 874w"><source srcset="images/cloudflare-1-300x90.png 300w, images/cloudflare-1-150x150.png 150w, images/cloudflare-1-768x229.png 768w, images/cloudflare-1.png 874w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/cloudflare-1.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/cloudflare-red2-300x90.png.webp 300w, images/cloudflare-red2-150x150.png.webp 150w, images/cloudflare-red2-768x229.png.webp 768w, images/cloudflare-red2.png.webp 874w"><source srcset="images/cloudflare-red2-300x90.png 300w, images/cloudflare-red2-150x150.png 150w, images/cloudflare-red2-768x229.png 768w, images/cloudflare-red2.png 874w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/cloudflare-red2.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customer-stories/opploans"><picture class="rs-image"><source type="image/webp" srcset="images/OppLoans_Logo-Band_white-150x74.png.webp 150w, images/OppLoans_Logo-Band_white.png.webp 300w"><source srcset="images/OppLoans_Logo-Band_white-150x74.png 150w, images/OppLoans_Logo-Band_white.png 300w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/OppLoans_Logo-Band_white.png">
+            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/opploans"><picture class="rs-image"><source type="image/webp" srcset="images/OppLoans_Logo-Band_white-150x74.png.webp 150w, images/OppLoans_Logo-Band_white.png.webp 300w"><source srcset="images/OppLoans_Logo-Band_white-150x74.png 150w, images/OppLoans_Logo-Band_white.png 300w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/OppLoans_Logo-Band_white.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/OppLoans_Logo-Band_Red-150x74.png.webp 150w, images/OppLoans_Logo-Band_Red.png.webp 300w"><source srcset="images/OppLoans_Logo-Band_Red-150x74.png 150w, images/OppLoans_Logo-Band_Red.png 300w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/OppLoans_Logo-Band_Red.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customer-stories/lending-club"><picture class="rs-image"><source type="image/webp" srcset="images/lendingclub_white-300x57.png.webp 300w, images/lendingclub_white-150x67.png.webp 150w, images/lendingclub_white.png.webp 350w"><source srcset="images/lendingclub_white-300x57.png 300w, images/lendingclub_white-150x67.png 150w, images/lendingclub_white.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/lendingclub_white.png">
+            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/lending-club"><picture class="rs-image"><source type="image/webp" srcset="images/lendingclub_white-300x57.png.webp 300w, images/lendingclub_white-150x67.png.webp 150w, images/lendingclub_white.png.webp 350w"><source srcset="images/lendingclub_white-300x57.png 300w, images/lendingclub_white-150x67.png 150w, images/lendingclub_white.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/lendingclub_white.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/lendingclub_red2-300x57.png.webp 300w, images/lendingclub_red2-150x67.png.webp 150w, images/lendingclub_red2.png.webp 350w"><source srcset="images/lendingclub_red2-300x57.png 300w, images/lendingclub_red2-150x67.png 150w, images/lendingclub_red2.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/lendingclub_red2.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://buildabot.io/customer-stories/splunk-uses-product-analytics-to-win?autoplay=true"><picture class="rs-image"><source type="image/webp" srcset="images/splunk-logo-300x89.png.webp 300w, images/splunk-logo-150x135.png.webp 150w, images/splunk-logo.png.webp 455w"><source srcset="images/splunk-logo-300x89.png 300w, images/splunk-logo-150x135.png 150w, images/splunk-logo.png 455w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/splunk-logo.png">
+            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/splunk-uses-product-analytics-to-win?autoplay=true"><picture class="rs-image"><source type="image/webp" srcset="images/splunk-logo-300x89.png.webp 300w, images/splunk-logo-150x135.png.webp 150w, images/splunk-logo.png.webp 455w"><source srcset="images/splunk-logo-300x89.png 300w, images/splunk-logo-150x135.png 150w, images/splunk-logo.png 455w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/splunk-logo.png">
             </picture><picture class="rs-image"><source type="image/webp" srcset="images/splunk-logo-red2-300x89.png.webp 300w, images/splunk-logo-red2-150x135.png.webp 150w, images/splunk-logo-red2.png.webp 455w"><source srcset="images/splunk-logo-red2-300x89.png 300w, images/splunk-logo-red2-150x135.png 150w, images/splunk-logo-red2.png 455w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/splunk-logo-red2.png">
             </picture></a></div></div></div></div></section>
 
-<section id="fifty-fifty-p3xk6ngtnep-ke0fhp7x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Measure Everything, All The Time</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Measure everything</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">buildabot gives you a complete dataset of every interaction with your product. Every click. Every tap. Every swipe. There’s no code to implement, and no need to decide in advance what to track.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://buildabot.io/product/autocapture">
+<section id="fifty-fifty-p3xk6ngtnep-ke0fhp7x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Measure Everything, All The Time</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Measure everything</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap gives you a complete dataset of every interaction with your product. Every click. Every tap. Every swipe. There’s no code to implement, and no need to decide in advance what to track.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/autocapture">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -427,18 +438,18 @@ min-height: 385px; }
 	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
 	</svg>
 	</span>
-	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><div id="" src="https://buildabot.wistia.com/medias/86gtp08hct" class="pilot-embed pilot-embed-16by9 pilot-align-left" style="width: 100%;"><iframe title="buildabot - A Smarter Approach to Product Video" src="86gtp08hct.html" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen="" width="500" height="281"></iframe><script src="js/E-v1.js" async></script></div></div></div></section>
+	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><div id="" src="https://heap.wistia.com/medias/86gtp08hct" class="pilot-embed pilot-embed-16by9 pilot-align-left" style="width: 100%;"><iframe title="Heap - A Smarter Approach to Product Video" src="86gtp08hct.html" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen="" width="500" height="281"></iframe><script src="js/E-v1.js" async></script></div></div></div></section>
 
-<section id="fifty-fifty-3ccf4kltsxj-ke0fhp8h" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Improve the Customer Journey</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Conversion, Retention, and more</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>buildabot helps you improve every part of the customer journey: <a href="https://buildabot.io/solutions/activation">activation</a>, acquisition, <a href="https://buildabot.io/solutions/retention">retention</a>, revenue, and referral.<br><br>Use data to increase conversion and grow lifetime value.</p><ul id="" class="rs-list rs-list--unordered style--secondary has-body-font-size-lg "><li>Quickly get users to your “Aha” moments</li><li>Analyze funnels to reduce moments of friction</li><li>Improve <a href="https://buildabot.io/solutions/conversion-rate-optimization">Conversion Rate Optimization </a>(CRO) across your user base</li><li>Segment users by behavior to personalize their experience</li></ul><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png.webp 300w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png.webp 1024w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png.webp 150w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png.webp 768w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png.webp 1536w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png.webp 2048w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png.webp 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png.webp 2952w"><source data-srcset="https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png 300w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png 1024w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png 150w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png 768w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png 1536w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png 2048w, https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png">
+<section id="fifty-fifty-3ccf4kltsxj-ke0fhp8h" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Improve the Customer Journey</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Conversion, Retention, and more</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>Heap helps you improve every part of the customer journey: <a href="https://heap.io/solutions/activation">activation</a>, acquisition, <a href="https://heap.io/solutions/retention">retention</a>, revenue, and referral.<br><br>Use data to increase conversion and grow lifetime value.</p><ul id="" class="rs-list rs-list--unordered style--secondary has-body-font-size-lg "><li>Quickly get users to your “Aha” moments</li><li>Analyze funnels to reduce moments of friction</li><li>Improve <a href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization </a>(CRO) across your user base</li><li>Segment users by behavior to personalize their experience</li></ul><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png.webp 300w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png.webp 1024w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png.webp 150w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png.webp 768w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png.webp 1536w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png.webp 2048w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png.webp 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png.webp 2952w"><source data-srcset="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png 300w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png 1024w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png 150w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png 768w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png 1536w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png 2048w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png">
             </picture></div></div></section>
 
-<section class="rs-section block block-post-gallery"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Hear from our customers</h2><p id="" class="rs-paragraph style--secondary has-body-font-size-lg ">We help companies in SaaS, fintech, mobile, eCommerce, media, and more</p><div id="" class="rs-container has-3-columns mobile-landscape-has-3-columns mobile-portrait-has-1-columns "><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://buildabot.io/customer-stories/huel" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://buildabot.io/wp-content/uploads/2021/02/Huel_Logo_large_5-768x402.jpg" alt="buildabot Helps Huel Get Granular Detail in Minutes, Not Days" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">buildabot Helps Huel Get Granular Detail in Minutes, Not Days</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“With buildabot, my team knows why things happen.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://buildabot.io/customer-stories/huel">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://buildabot.io/customer-stories/snapfish" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://buildabot.io/wp-content/uploads/2020/12/download-1-768x403.png" alt="Snapfish Uses buildabot&#8217;s Omni-Channel Tracking to Increase Conversions" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Snapfish Uses buildabot&#8217;s Omni-Channel Tracking to Increase Conversions</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“buildabot will solve your pain for instrumenting mobile apps and tracking users across channels. End of story.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://buildabot.io/customer-stories/snapfish">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://buildabot.io/customer-stories/northwestern-mutual" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://buildabot.io/wp-content/uploads/2020/11/northwestern-mutual-1.svg" alt="Northwestern Mutual becomes data-driven with buildabot" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Northwestern Mutual becomes data-driven with buildabot</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">&#8220;buildabot has that ‘anything is possible’ kind of capability.&#8221;</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://buildabot.io/customer-stories/northwestern-mutual">Read More</span></div></a></div></div></div></div></div></section>
+<section class="rs-section block block-post-gallery"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Hear from our customers</h2><p id="" class="rs-paragraph style--secondary has-body-font-size-lg ">We help companies in SaaS, fintech, mobile, eCommerce, media, and more</p><div id="" class="rs-container has-3-columns mobile-landscape-has-3-columns mobile-portrait-has-1-columns "><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/huel" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2021/02/Huel_Logo_large_5-768x402.jpg" alt="Heap Helps Huel Get Granular Detail in Minutes, Not Days" data-lazy="true"><div class="rs-card--content">
+		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Heap Helps Huel Get Granular Detail in Minutes, Not Days</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“With Heap, my team knows why things happen.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/huel">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/snapfish" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2020/12/download-1-768x403.png" alt="Snapfish Uses Heap&#8217;s Omni-Channel Tracking to Increase Conversions" data-lazy="true"><div class="rs-card--content">
+		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Snapfish Uses Heap&#8217;s Omni-Channel Tracking to Increase Conversions</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“Heap will solve your pain for instrumenting mobile apps and tracking users across channels. End of story.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/snapfish">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/northwestern-mutual" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2020/11/northwestern-mutual-1.svg" alt="Northwestern Mutual becomes data-driven with Heap" data-lazy="true"><div class="rs-card--content">
+		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Northwestern Mutual becomes data-driven with Heap</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">&#8220;Heap has that ‘anything is possible’ kind of capability.&#8221;</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/northwestern-mutual">Read More</span></div></a></div></div></div></div></div></section>
 
-<section id="fifty-fifty-ppr01iq25bh-ke0fhp89" class="rs-section block block-fifty-fifty block-fifty-fifty--rightleft "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png.webp 300w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png.webp 1024w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png.webp 150w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png.webp 768w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png.webp 1536w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png.webp 2048w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png.webp 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png.webp 2952w"><source data-srcset="https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png 300w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png 1024w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png 150w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png 768w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png 1536w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png 2048w, https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png">
-            </picture></div><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Data for Hard Product Decisions</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">data for decisions</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>Data is worthless if it doesn’t help you make better decisions. buildabot was built to answer the hard questions: What to build? How are people using our features? How to measure impact?<br><br>buildabot tells you how people use your product. Where users get stuck. What features they love. What features they don’t.<br><br>Then we help you turn those insights into action.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://buildabot.io/product/product-analytics">
+<section id="fifty-fifty-ppr01iq25bh-ke0fhp89" class="rs-section block block-fifty-fifty block-fifty-fifty--rightleft "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png.webp 300w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png.webp 1024w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png.webp 150w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png.webp 768w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png.webp 1536w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png.webp 2048w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png.webp 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png.webp 2952w"><source data-srcset="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png 300w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png 1024w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png 150w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png 768w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png 1536w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png 2048w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png">
+            </picture></div><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Data for Hard Product Decisions</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">data for decisions</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>Data is worthless if it doesn’t help you make better decisions. Heap was built to answer the hard questions: What to build? How are people using our features? How to measure impact?<br><br>Heap tells you how people use your product. Where users get stuck. What features they love. What features they don’t.<br><br>Then we help you turn those insights into action.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/product-analytics">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -454,8 +465,8 @@ min-height: 385px; }
 	</span>
 	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div></div></section>
 
-<section class="rs-section block block-image-grid block-image-grid--inverted"><div class="rs-container rs-container--container has-12-columns mobile-landscape-has-6-columns"><div class="block__column spans-12 mobile-landscape-spans-6 text-cards__masonry mobile-portrait-spans-6"><div class="text-cards__masonry-container"><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/03/Configuration@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">The era of track(‘event’) is over</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">For years, analytics vendors required writing <strong>track(&#8216;event&#8217;)</strong> for each interaction. buildabot eliminates this requirement, autocapturing a complete customer dataset and letting you model it any way you need</p><a id="" class="rs-link style--alternate-text " target="_self" href="/product/autocapture">
+<section class="rs-section block block-image-grid block-image-grid--inverted"><div class="rs-container rs-container--container has-12-columns mobile-landscape-has-6-columns"><div class="block__column spans-12 mobile-landscape-spans-6 text-cards__masonry mobile-portrait-spans-6"><div class="text-cards__masonry-container"><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Configuration@2x.png">
+            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">The era of track(‘event’) is over</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">For years, analytics vendors required writing <strong>track(&#8216;event&#8217;)</strong> for each interaction. Heap eliminates this requirement, autocapturing a complete customer dataset and letting you model it any way you need</p><a id="" class="rs-link style--alternate-text " target="_self" href="/product/autocapture">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -469,16 +480,16 @@ min-height: 385px; }
 	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
 	</svg>
 	</span>
-	</a></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Growth@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Growth@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/03/Growth@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Mobile + Web</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">buildabot automatically merges web and mobile visits into a single user identity. No more manually assembling information.</p></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/03/Trophy@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Robust integrations</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Import data from tools like Salesforce, Marketo, Mailchimp, and Optimizely. Then combine it with buildabot data and easily output—via managed ELT—to Snowflake, BigQuery, or other data warehouses.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://buildabot.io/product/connect">
+	</a></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Growth@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Growth@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Growth@2x.png">
+            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Mobile + Web</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap automatically merges web and mobile visits into a single user identity. No more manually assembling information.</p></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Trophy@2x.png">
+            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Robust integrations</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Import data from tools like Salesforce, Marketo, Mailchimp, and Optimizely. Then combine it with Heap data and easily output—via managed ELT—to Snowflake, BigQuery, or other data warehouses.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/connect">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
 	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
 	</svg>
 	<span class="button-text">
-	 Learn about buildabot Connect
+	 Learn about Heap Connect
 	</span>
 	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
@@ -487,7 +498,7 @@ min-height: 385px; }
 	</span>
 	</a></div></div></div></div></div></section>
 
-<section id="fifty-fifty-aghzq2m1cb8-ke0fhp8x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">The buildabot Guide to Conversion Rate Optimization</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Latest ebook</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><a href="https://buildabot.io/topics/conversion-rate-optimization-for-marketing-product-teams">Conversion rate optimization (CRO)</a> takes creativity and diligence. But there is — absolutely — a systematic way to do it right. And we’re thrilled to share it with you!<br><br>Enter <strong>The buildabot Guide to Conversion Rate Optimization (CRO)</strong>. In it we gather learnings from many years of helping customers to lay out a systematic, repeatable approach to improving conversion, in all verticals.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://buildabot.io/ebook-buildabot-guide-to-cro">
+<section id="fifty-fifty-aghzq2m1cb8-ke0fhp8x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">The Heap Guide to Conversion Rate Optimization</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Latest ebook</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><a href="https://heap.io/topics/conversion-rate-optimization-for-marketing-product-teams">Conversion rate optimization (CRO)</a> takes creativity and diligence. But there is — absolutely — a systematic way to do it right. And we’re thrilled to share it with you!<br><br>Enter <strong>The Heap Guide to Conversion Rate Optimization (CRO)</strong>. In it we gather learnings from many years of helping customers to lay out a systematic, repeatable approach to improving conversion, in all verticals.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/ebook-heap-guide-to-cro">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -501,10 +512,10 @@ min-height: 385px; }
 	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
 	</svg>
 	</span>
-	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg.webp 300w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg.webp 1024w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg.webp 150w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg.webp 768w, /wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg.webp 1392w"><source data-srcset="https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg 300w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg 1024w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg 150w, https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg 768w, /wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg 1392w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://buildabot.io/wp-content/uploads/2020/10/buildabot_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg">
+	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg.webp 300w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg.webp 1024w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg.webp 150w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg.webp 768w, /wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg.webp 1392w"><source data-srcset="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg 300w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg 1024w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg 150w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg 768w, /wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg 1392w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg">
             </picture></div></div></section>
 
-<section id="cta-0h463cd1z9o7-ke0fhp97" class="rs-section block block-cta block-cta--short "><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Getting started is easy</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Interested in a demo of buildabot’s Product Analytics platform? <br>We’d love to chat with you!</p><a id="" class="rs-link style--primary " target="_blank" href="/request-product-analytics-demo">
+<section id="cta-0h463cd1z9o7-ke0fhp97" class="rs-section block block-cta block-cta--short "><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Getting started is easy</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Interested in a demo of Heap’s Product Analytics platform? <br>We’d love to chat with you!</p><a id="" class="rs-link style--primary " target="_blank" href="/request-product-analytics-demo">
 	<span class="inner-button">
 	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
@@ -528,52 +539,52 @@ min-height: 385px; }
 <footer class="site-footer">
 	<div class="site-footer__grid rs-container rs-container--container">
 		<div class="site-footer__footer-info">
-			<a href="https://buildabot.io/" title="buildabot" class="main-navigation__logo">
-				<img src="fonts/buildabot-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
+			<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
+				<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
 			<p class="rs-paragraph style--alternate">Power your business decisions with truth.</p>
 		</div>
 		<nav class="site-footer__footer-solutions site-footer__footer-menu">
 	<h5 class="rs-heading has-heading-font-size-xs">Solutions</h5>
-	<div class="menu-solutions-container"><ul id="menu-solutions" class="menu"><li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://buildabot.io/solutions/conversion-rate-optimization">Conversion Rate Optimization</a></li>
-<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="https://buildabot.io/solutions/activation">Activation</a></li>
-<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://buildabot.io/solutions/engagement">Engagement</a></li>
-<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://buildabot.io/solutions/retention">Retention</a></li>
+	<div class="menu-solutions-container"><ul id="menu-solutions" class="menu"><li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization</a></li>
+<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="https://heap.io/solutions/activation">Activation</a></li>
+<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://heap.io/solutions/engagement">Engagement</a></li>
+<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://heap.io/solutions/retention">Retention</a></li>
 </ul></div></nav>
 <nav class="site-footer__footer-resources site-footer__footer-menu">
 	<h5 class="rs-heading has-heading-font-size-xs">Resources</h5>
-	<div class="menu-resources-container"><ul id="menu-resources" class="menu"><li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://buildabot.io/resources">All Resources</a></li>
-<li id="menu-item-11570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11570"><a href="https://buildabot.io/covid-19-resources">COVID-19 Resources</a></li>
-<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://buildabot.io/blog">Blog</a></li>
-<li id="menu-item-14939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14939"><a href="https://buildabot.io/topics">Topics</a></li>
+	<div class="menu-resources-container"><ul id="menu-resources" class="menu"><li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://heap.io/resources">All Resources</a></li>
+<li id="menu-item-11570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11570"><a href="https://heap.io/covid-19-resources">COVID-19 Resources</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://heap.io/blog">Blog</a></li>
+<li id="menu-item-14939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14939"><a href="https://heap.io/topics">Topics</a></li>
 <li id="menu-item-12359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12359"><a href="/events">Events</a></li>
-<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="https://help.buildabot.io/">Help Center</a></li>
-<li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="https://learn.buildabot.io/">buildabot University</a></li>
-<li id="menu-item-10318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10318"><a href="https://buildabot.io/pricing">Pricing</a></li>
-<li id="menu-item-12189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12189"><a href="https://buildabot.io/compare">How buildabot compares</a></li>
-<li id="menu-item-13150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13150"><a href="https://buildabot.io/topics/what-is-product-analytics">Product Analytics</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="https://help.heap.io/">Help Center</a></li>
+<li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="https://learn.heap.io/">Heap University</a></li>
+<li id="menu-item-10318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10318"><a href="https://heap.io/pricing">Pricing</a></li>
+<li id="menu-item-12189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12189"><a href="https://heap.io/compare">How Heap compares</a></li>
+<li id="menu-item-13150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13150"><a href="https://heap.io/topics/what-is-product-analytics">Product Analytics</a></li>
 </ul></div></nav>
 <nav class="site-footer__footer-product site-footer__footer-menu">
 	<h5 class="rs-heading has-heading-font-size-xs">Product</h5>
-	<div class="menu-product-container"><ul id="menu-product" class="menu"><li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://buildabot.io/product/product-analytics">Product Analytics Software</a></li>
-<li id="menu-item-13610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13610"><a href="https://buildabot.io/buildabot-data-engine">buildabot Data Engine</a></li>
-<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://buildabot.io/product/autocapture">Autocapture</a></li>
-<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://buildabot.io/product/virtual-events">Virtual Events</a></li>
-<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://buildabot.io/product/data-governance">Data Governance</a></li>
-<li id="menu-item-10316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10316"><a href="https://buildabot.io/product/security-compliance">Security &#038; Compliance</a></li>
+	<div class="menu-product-container"><ul id="menu-product" class="menu"><li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://heap.io/product/product-analytics">Product Analytics Software</a></li>
+<li id="menu-item-13610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13610"><a href="https://heap.io/heap-data-engine">Heap Data Engine</a></li>
+<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://heap.io/product/autocapture">Autocapture</a></li>
+<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://heap.io/product/virtual-events">Virtual Events</a></li>
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://heap.io/product/data-governance">Data Governance</a></li>
+<li id="menu-item-10316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10316"><a href="https://heap.io/product/security-compliance">Security &#038; Compliance</a></li>
 </ul></div></nav>
 <nav class="site-footer__footer-company site-footer__footer-menu">
 	<h5 class="rs-heading has-heading-font-size-xs">Company</h5>
-	<div class="menu-company-container"><ul id="menu-company" class="menu"><li id="menu-item-10348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10348"><a href="https://buildabot.io/about">About</a></li>
-<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://buildabot.io/customers">Customers</a></li>
-<li id="menu-item-15473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15473"><a href="https://buildabot.io/partners">Partners</a></li>
-<li id="menu-item-10338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10338"><a href="https://buildabot.io/careers">Careers</a></li>
-<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://buildabot.io/contact-sales">Contact Us</a></li>
+	<div class="menu-company-container"><ul id="menu-company" class="menu"><li id="menu-item-10348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10348"><a href="https://heap.io/about">About</a></li>
+<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://heap.io/customers">Customers</a></li>
+<li id="menu-item-15473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15473"><a href="https://heap.io/partners">Partners</a></li>
+<li id="menu-item-10338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10338"><a href="https://heap.io/careers">Careers</a></li>
+<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://heap.io/contact-sales">Contact Us</a></li>
 <li id="menu-item-1054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1054"><a href="/privacy">Privacy</a></li>
 <li id="menu-item-1055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1055"><a href="/terms">Terms</a></li>
 </ul></div></nav>
 	</div>
 	<div class="site-footer__copyright rs-container rs-container--container">
-		<p class="rs-paragraph style--alternate">&copy; 2021 buildabot, Inc.</p>
+		<p class="rs-paragraph style--alternate">&copy; 2021 Heap, Inc.</p>
 	</div>
 </footer><!-- .site-footer -->
 
@@ -582,7 +593,7 @@ min-height: 385px; }
 <script type="text/javascript" src="js/jquery-migrate.min.js"></script>
 <script type="text/javascript">
 /* <![CDATA[ */
-var careers_departments = [{"careers_greenhouse_team":"Account Management","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/account-management"},{"careers_greenhouse_team":"Customer Success","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/customer-success"},{"careers_greenhouse_team":"Engineering","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Design","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Product","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Marketing","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/marketing"},{"careers_greenhouse_team":"People","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Finance and Operations ","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Sales","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/sales"},{"careers_greenhouse_team":"Sales Development","careers_department_page":"https:\/\/buildabot.io\/careers\/departments\/sales"}];
+var careers_departments = [{"careers_greenhouse_team":"Account Management","careers_department_page":"https:\/\/heap.io\/careers\/departments\/account-management"},{"careers_greenhouse_team":"Customer Success","careers_department_page":"https:\/\/heap.io\/careers\/departments\/customer-success"},{"careers_greenhouse_team":"Engineering","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Design","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Product","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Marketing","careers_department_page":"https:\/\/heap.io\/careers\/departments\/marketing"},{"careers_greenhouse_team":"People","careers_department_page":"https:\/\/heap.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Finance and Operations ","careers_department_page":"https:\/\/heap.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Sales","careers_department_page":"https:\/\/heap.io\/careers\/departments\/sales"},{"careers_greenhouse_team":"Sales Development","careers_department_page":"https:\/\/heap.io\/careers\/departments\/sales"}];
 /* ]]> */
 </script>
 <script type="text/javascript" src="js/main.js"></script>
