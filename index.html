@@ -1,598 +1,850 @@
 <!DOCTYPE html>
-<!--[if IE 7]>
-<html class="ie ie7" lang="en-US">
-<![endif]-->
-<!--[if IE 8]>
-<html class="ie ie8" lang="en-US">
-<![endif]-->
-<!--[if !(IE 7) & !(IE 8)]><!-->
-<html lang="en-US">
-	<!--<![endif]-->
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
-		<title>buildabot.gg - Custom Discord & Telegram Bots</title>
-		<!--Favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<link rel="manifest" href="#">
-		<link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#28004d">
-		<meta name="theme-color" content="#28004d">
-		<!-- End Favicons -->
-		<link rel="preload" href="https://heap.io/wp-content/themes/rs_theme/assets/js/main.js?ver=210315-193151" as="script">
-<link rel="preload" href="https://heap.io/wp-content/themes/rs_theme/assets/css/main.css?ver=210315-193149" as="style">
-<meta name="description" content="Buildabot develops and designs powerful bots for platforms like Telegram and Discord. Elevate your channels and servers with Buildabot!">
-<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://buildabot.gg/">
-<meta property="og:locale" content="en_US">
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5ZSFQWG');</script>
+<!-- End Google Tag Manager -->
+
+<link rel="shorcut icon" href="images/favicon.png">
+
+<title>estudio/nk - Home</title>
+<meta property="og:site_name" content="estudio/nk">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Buildabot - Custom Telegram & Discord Bots">
-<meta property="og:description" content="Buildabot develops and designs powerful bots for platforms like Telegram and Discord. Elevate your channels and servers with Buildabot!">
-<meta property="og:url" content="https://buildabot.gg/">
-<meta property="og:site_name" content="Buildabot">
-<meta property="og:image" content="images/Website-Share-Social-Image.jpg">
-<meta property="og:image:secure_url" content="images/Website-Share-Social-Image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:description" content="Buildabot develops and designs powerful bots for platforms like Telegram and Discord. Elevate your channels and servers with Buildabot!">
-<meta name="twitter:title" content="Buildabot - Custom Telegram & Discord Bots">
-<meta name="twitter:image" content="https://heap.io/wp-content/uploads/2019/10/Website-Share-Social-Image.jpg">
-<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://heap.io/#website","url":"https://heap.io/","name":"Heap","potentialAction":{"@type":"SearchAction","target":"https://heap.io/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://heap.io/#primaryimage","url":"https://heap.io/wp-content/uploads/2020/11/Website-Share-Social-Image.jpg","width":1200,"height":630},{"@type":"WebPage","@id":"https://heap.io/#webpage","url":"https://heap.io/","inLanguage":"en-US","name":"Heap - A Smarter Approach to Product","isPartOf":{"@id":"https://heap.io/#website"},"primaryImageOfPage":{"@id":"https://heap.io/#primaryimage"},"datePublished":"2020-03-20T16:04:41-07:00","dateModified":"2021-03-11T16:08:37-08:00","description":"Heap is a smarter way to do Product Analytics, giving PMs autocaptured, actionable customer data for true product innovation."}]}</script>
-<!-- / Yoast SEO Premium plugin. -->
+<meta property="og:title" content="estudio/nk - Home">
+<meta property="og:description" content="We’re a design studio with headquarters in Buenos Aires.">
+<meta property="og:image" content="images/2_1.jpg">
+<meta property="og:url" content="http://estudionk.com/en/">
+<meta name="description" content="We’re a design studio with headquarters in Buenos Aires.">
+<meta name="keywords" content="home, estudio/nk">
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/plugins.min.css" rel="stylesheet">
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/css.min.css" rel="stylesheet">
+<link href="css/fontawesome-all.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="css/css.css" rel="stylesheet">
 
-<link rel="dns-prefetch" href="//heap.io">
-<link rel="dns-prefetch" href="//cdn.bizible.com">
-<link rel="dns-prefetch" href="//s.w.org">
-<link rel="alternate" type="application/rss+xml" title="Heap &raquo; Feed" href="https://heap.io/feed">
-<link rel="alternate" type="application/rss+xml" title="Heap &raquo; Comments Feed" href="https://heap.io/comments/feed">
-<link rel="stylesheet" id="pilot-style-css-css" href="css/frontend.css" type="text/css" media="all">
-<link rel="stylesheet" id="theme_css-css" href="css/main.css" type="text/css" media="all">
-<script type="text/javascript" src="js/bizible.js"></script>
-<link rel="https://api.w.org/" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://heap.io/xmlrpc.php?rsd">
-<link rel="shortlink" href="https://heap.io/">
-<link rel="alternate" type="application/json+oembed" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fheap.io%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://heap.io/9otwdsvj1z-25gy9e0qr0/oembed/1.0/embed?url=https%3A%2F%2Fheap.io%2F&#038;format=xml">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+<meta name="theme-color" content="#59ead2">
 
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+<!-- Hotjar Tracking Code for www.estudionk.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1516725,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    </head>
 
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Standard-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <body class="loading">
 
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/GT-America-Mono-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+        <header id="header" class="show-me">
+    <div class="wrapper">
+        <a href="/en" class="logo link enter-x-r hoverable">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="75.9px" height="11.8px" viewbox="0 0 75.9 11.8" style="enable-background:new 0 0 75.9 11.8;" xml:space="preserve"> <style type="text/css"> .st0{fill:#26E4C4;} .st1{fill:#343434; transition: all .3s;} </style> <defs> </defs> <g> <polygon class="st0" points="56.1,0 55.5,0 55.1,0 50.3,11.5 50.7,11.5 51.3,11.5 51.7,11.5 56.5,0 	"/> <path class="st1" d="M59.2,11.5h-2.1V3.9h2v1c0.5-0.8,1.4-1.2,2.2-1.2c1.9,0,2.8,1.4,2.8,3v4.8h-2.1V7.1c0-0.9-0.4-1.5-1.4-1.5 c-0.9,0-1.4,0.7-1.4,1.6V11.5z"/> <polygon class="st1" points="70.2,7.1 73.4,11.5 70.8,11.5 68.8,8.6 68,9.5 68,11.5 65.9,11.5 65.9,0.5 68,0.5 68,6.7 70.6,3.9 73.3,3.9 	"/> <path class="st1" d="M7.4,7.6c0-2.4-1.3-4-3.7-4C1.7,3.6,0,5.3,0,7.7c0,2.6,1.8,4.1,3.9,4.1c1.8,0,3-0.9,3.4-2.3L6,9.1 c-0.3,0.9-0.9,1.4-2.1,1.4c-1.3,0-2.3-1-2.3-2.3h5.8C7.4,8,7.4,7.8,7.4,7.6 M1.6,6.9c0.1-1,0.8-2,2.1-2c1.4,0,2.1,0.9,2.1,2H1.6z"/> <path class="st1" d="M12.1,7.1l-1.2-0.3C10.2,6.7,10,6.4,10,5.9c0-0.5,0.5-1,1.3-1c1.2,0,1.5,0.9,1.6,1.3l1.3-0.5 C14,5,13.3,3.6,11.2,3.6C9.7,3.6,8.5,4.7,8.5,6c0,1.1,0.7,1.9,1.9,2.2l1.3,0.3c0.6,0.1,1,0.5,1,1c0,0.5-0.5,1-1.3,1 c-1.1,0-1.7-0.6-1.8-1.4L8.3,9.5c0.1,0.9,1,2.2,3.1,2.2c1.9,0,2.8-1.3,2.8-2.4C14.2,8.3,13.5,7.4,12.1,7.1"/> <path class="st1" d="M35,11.5h1.5l0-1.4v-10H35v4.8c-0.3-0.6-1-1.3-2.4-1.3c-2.2,0-3.6,1.9-3.6,4c0,2.3,1.4,4.1,3.6,4.1 c1.2,0,2-0.6,2.4-1.4L35,11.5z M32.8,10.4c-1.4,0-2.3-1.2-2.3-2.8c0-1.6,0.9-2.7,2.3-2.7C34.1,5,35,6.1,35,7.6 C35,9.2,34.1,10.4,32.8,10.4"/> <rect x="38.5" y="3.8" class="st1" width="1.5" height="7.7"/> <path class="st1" d="M45.6,3.6c-2.3,0-3.9,1.7-3.9,4.1c0,2.4,1.6,4.1,3.9,4.1c2.3,0,3.9-1.7,3.9-4.1C49.5,5.4,47.9,3.6,45.6,3.6 M45.6,10.4c-1.3,0-2.4-1-2.4-2.8c0-1.8,1.1-2.7,2.4-2.7c1.3,0,2.4,1,2.4,2.7C48,9.5,46.8,10.4,45.6,10.4"/> <path class="st1" d="M27.6,10.1V3.8h-1.5v4.6c0,1.2-0.6,2-1.8,2c-1.3,0-1.7-0.9-1.7-2V3.8h0H21h-3.1V1.5h-1.4h-0.1v1.8v0.6h-1.5 v1.4h1.5v4.2c0,1.4,0.8,2.2,2.1,2.2c0.5,0,0.9-0.1,1-0.1v-1.3c-0.1,0-0.4,0.1-0.6,0.1c-0.8,0-1.1-0.4-1.1-1.1v-4H21v3.5 c0,1.7,1.1,3.1,2.9,3.1c0.9,0,1.9-0.4,2.3-1.2l0,0.9h1.4L27.6,10.1z"/> <path class="st1" d="M40.3,1.2c0,0.6-0.5,1-1,1c-0.6,0-1-0.5-1-1c0-0.6,0.5-1,1-1C39.9,0.2,40.3,0.7,40.3,1.2z"/> <g> <path class="st1" d="M75.3,3.8c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6-0.3-0.6-0.6C74.7,4,75,3.8,75.3,3.8z M75.3,4.8c0.3,0,0.5-0.2,0.5-0.5c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5C74.8,4.6,75,4.8,75.3,4.8z M75.2,4.7h-0.1V4h0.2 c0.1,0,0.2,0.1,0.2,0.2c0,0.1-0.1,0.2-0.1,0.2l0.1,0.3h-0.1l-0.1-0.2h0V4.7z M75.3,4.3c0.1,0,0.1,0,0.1-0.1c0-0.1,0-0.1-0.1-0.1 h-0.1L75.3,4.3L75.3,4.3z"/> </g> </g> </svg>
+        </a>
+        <div class="right">
+            
+            <div class="select language-picker enter-x delay-2 hoverable" id="selector-idioma">
+            
+                <div class="selected"><span class="c-lightgrey">english</span> <i class="fal fa-angle-down c-green"></i></div>
+                <div class="options">
+                    <a class="option c-lightgrey" href="/es">
+                        <span>español</span>
+                    </a>
+                </div>
+            
+            </div>
 
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff" type="font/woff" crossorigin="anonymous">
-	<link rel="preload" as="font" href="https://heap.io/wp-content/themes/rs_theme/assets/fonts/icomoon_yqbhl5.woff2" type="font/woff2" crossorigin="anonymous">
-		</head>
-	<body class="home page-template-default page page-id-10633 wp-schema-pro-1.3.1 unknown home-2">
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+            <div class="hablemos-wrap">
+                <a href="/contacto" class="button link c-green hoverable">
+                    <span data-text="Hi, can we talk?">Hi, can we talk?</span>
+                </a>
+            </div>
 
+            <div class="toggle-nav enter-x delay-1 hoverable" id="toggle-nav">
+                <span class="bg-grey"></span>
+                <span class="bg-grey"></span>
+                <span class="bg-grey"></span>
+            </div>
 
-<div class="hello-bar">
-	<div class="rs-container rs-container--container">
-		<a href="https://heap.io/webinar-live-weekly-demo" target="_self">
-							<span class="rs-tag">Weekly Live Demo</span>
-						<p class="rs-paragraph style--alternate">
-				<strong>Join us every Thursday for a weekly live demo of Heap</strong>
-				<a class="rs-link style--link-arrow" href="https://heap.io/webinar-live-weekly-demo" target="_self">Register Now</a>
-			</p>
-		</a>
-	</div>
+        </div>
+    </div>
+</header>
+
+<div class="page-transition show">
+    <div class="loader">
+        <svg style="display: block" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="75.9px" height="11.8px" viewbox="0 0 75.9 11.8" xml:space="preserve"> <style type="text/css" style=" "> .lst0{fill:#2e4a45;} .lst1{fill:#fff; transition: all .3s;} </style> <defs> </defs> <g> <polygon class="lst0" points="56.1,0 55.5,0 55.1,0 50.3,11.5 50.7,11.5 51.3,11.5 51.7,11.5 56.5,0 	"/> <path class="lst1" d="M59.2,11.5h-2.1V3.9h2v1c0.5-0.8,1.4-1.2,2.2-1.2c1.9,0,2.8,1.4,2.8,3v4.8h-2.1V7.1c0-0.9-0.4-1.5-1.4-1.5 c-0.9,0-1.4,0.7-1.4,1.6V11.5z"/> <polygon class="lst1" points="70.2,7.1 73.4,11.5 70.8,11.5 68.8,8.6 68,9.5 68,11.5 65.9,11.5 65.9,0.5 68,0.5 68,6.7 70.6,3.9 73.3,3.9 	"/> <path class="lst1" d="M7.4,7.6c0-2.4-1.3-4-3.7-4C1.7,3.6,0,5.3,0,7.7c0,2.6,1.8,4.1,3.9,4.1c1.8,0,3-0.9,3.4-2.3L6,9.1 c-0.3,0.9-0.9,1.4-2.1,1.4c-1.3,0-2.3-1-2.3-2.3h5.8C7.4,8,7.4,7.8,7.4,7.6 M1.6,6.9c0.1-1,0.8-2,2.1-2c1.4,0,2.1,0.9,2.1,2H1.6z"/> <path class="lst1" d="M12.1,7.1l-1.2-0.3C10.2,6.7,10,6.4,10,5.9c0-0.5,0.5-1,1.3-1c1.2,0,1.5,0.9,1.6,1.3l1.3-0.5 C14,5,13.3,3.6,11.2,3.6C9.7,3.6,8.5,4.7,8.5,6c0,1.1,0.7,1.9,1.9,2.2l1.3,0.3c0.6,0.1,1,0.5,1,1c0,0.5-0.5,1-1.3,1 c-1.1,0-1.7-0.6-1.8-1.4L8.3,9.5c0.1,0.9,1,2.2,3.1,2.2c1.9,0,2.8-1.3,2.8-2.4C14.2,8.3,13.5,7.4,12.1,7.1"/> <path class="lst1" d="M35,11.5h1.5l0-1.4v-10H35v4.8c-0.3-0.6-1-1.3-2.4-1.3c-2.2,0-3.6,1.9-3.6,4c0,2.3,1.4,4.1,3.6,4.1 c1.2,0,2-0.6,2.4-1.4L35,11.5z M32.8,10.4c-1.4,0-2.3-1.2-2.3-2.8c0-1.6,0.9-2.7,2.3-2.7C34.1,5,35,6.1,35,7.6 C35,9.2,34.1,10.4,32.8,10.4"/> <rect x="38.5" y="3.8" class="lst1" width="1.5" height="7.7"/> <path class="lst1" d="M45.6,3.6c-2.3,0-3.9,1.7-3.9,4.1c0,2.4,1.6,4.1,3.9,4.1c2.3,0,3.9-1.7,3.9-4.1C49.5,5.4,47.9,3.6,45.6,3.6 M45.6,10.4c-1.3,0-2.4-1-2.4-2.8c0-1.8,1.1-2.7,2.4-2.7c1.3,0,2.4,1,2.4,2.7C48,9.5,46.8,10.4,45.6,10.4"/> <path class="lst1" d="M27.6,10.1V3.8h-1.5v4.6c0,1.2-0.6,2-1.8,2c-1.3,0-1.7-0.9-1.7-2V3.8h0H21h-3.1V1.5h-1.4h-0.1v1.8v0.6h-1.5 v1.4h1.5v4.2c0,1.4,0.8,2.2,2.1,2.2c0.5,0,0.9-0.1,1-0.1v-1.3c-0.1,0-0.4,0.1-0.6,0.1c-0.8,0-1.1-0.4-1.1-1.1v-4H21v3.5 c0,1.7,1.1,3.1,2.9,3.1c0.9,0,1.9-0.4,2.3-1.2l0,0.9h1.4L27.6,10.1z"/> <path class="lst1" d="M40.3,1.2c0,0.6-0.5,1-1,1c-0.6,0-1-0.5-1-1c0-0.6,0.5-1,1-1C39.9,0.2,40.3,0.7,40.3,1.2z"/> <g> <path class="lst1" d="M75.3,3.8c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6c-0.3,0-0.6-0.3-0.6-0.6C74.7,4,75,3.8,75.3,3.8z M75.3,4.8c0.3,0,0.5-0.2,0.5-0.5c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5C74.8,4.6,75,4.8,75.3,4.8z M75.2,4.7h-0.1V4h0.2 c0.1,0,0.2,0.1,0.2,0.2c0,0.1-0.1,0.2-0.1,0.2l0.1,0.3h-0.1l-0.1-0.2h0V4.7z M75.3,4.3c0.1,0,0.1,0,0.1-0.1c0-0.1,0-0.1-0.1-0.1 h-0.1L75.3,4.3L75.3,4.3z"/> </g> </g> </svg>
+        <div class="loader-dot "></div>
+    </div>
+    <div id="l1"></div>
+    <div id="l2"></div>
+    <!-- <div id="l3"></div> -->
 </div>
 
-<header id="masthead" class="site-header">
-	<div class="rs-container rs-container--container">
-		<nav id="site-navigation" class="main-navigation">
-			<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
-				<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
-			<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li id="menu-item-9273" class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://heap.io/product/product-analytics">Product</a>
-<ul class="submenu" role="menu">
-	<li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-272"><div title="Foundation" href="#">Foundation</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://heap.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
-</li>
-		<li id="menu-item-12959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://heap.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
-</li>
-		<li id="menu-item-12960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://heap.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-12956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="Heap Data Engine" href="https://heap.io/heap-data-engine">Heap Data Engine</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-12961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://heap.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
-</li>
-		<li id="menu-item-12958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://heap.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
-</li>
-		<li id="menu-item-12957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://heap.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
-</li>
-		<li id="menu-item-10306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://heap.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-273"><div title="Product Analytics" href="#">Product Analytics</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://heap.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
-</li>
-		<li id="menu-item-13852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://heap.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
-</li>
-		<li id="menu-item-10416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://heap.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-15068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://heap.io/heap-for-saas">Solutions</a>
-<ul class="submenu" role="menu">
-	<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-164"><div title="Use Cases" href="#">Use Cases</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
-</li>
-		<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://heap.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
-</li>
-		<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://heap.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
-</li>
-		<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://heap.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-14476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://heap.io/industries">Industries</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-14536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="Heap for SaaS" href="https://heap.io/heap-for-saas">Heap for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
-</li>
-		<li id="menu-item-13181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="Heap for Ecommerce and D2C" href="https://heap.io/heap-for-ecommerce">Heap for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
-</li>
-		<li id="menu-item-14472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="Heap for Financial Services" href="https://heap.io/heap-for-financial-services">Heap for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-128" class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why Heap" href="/why-product-analytics">Why Heap</a>
-<ul class="submenu" role="menu">
-	<li id="menu-item-15069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why Heap?" href="#">Why Heap?</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-10539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://heap.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-15070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="Heap vs Competitors" href="#">Heap vs Competitors</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-12190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How Heap compares" href="https://heap.io/compare">How Heap compares<p class="menu-item-description ">Why Heap is the superior alternative</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://heap.io/customers">Customer Stories</a>
-</li>
-<li id="menu-item-10301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://heap.io/pricing">Pricing</a>
-</li>
-<li id="menu-item-9334" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9334"><a title="Resources" href="/resources">Resources</a>
-<ul class="submenu" role="menu">
-	<li id="menu-item-9046" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9046"><div title="Learn More" href="#">Learn More</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-9047" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://heap.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
-</li>
-		<li id="menu-item-14488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://heap.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
-</li>
-		<li id="menu-item-12360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12360"><a title="Events" href="/events">Events<p class="menu-item-description ">Virtual events and group demos</p></a>
-</li>
-		<li id="menu-item-9050" class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://heap.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
-</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-15471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://heap.io/partners">Our Partners</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-15472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="Heap Partners Network" href="https://heap.io/partners">Heap Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
-</li>
-</ul>
-</li>
-	<li id="menu-item-9052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9052"><div title="Help Center" href="#">Help Center</div>
-	<ul class="submenu" role="menu">
-		<li id="menu-item-9051" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.heap.io/">Help Center<p class="menu-item-description ">How to use Heap</p></a>
-</li>
-		<li id="menu-item-10758" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="Heap University" href="https://learn.heap.io/">Heap University<p class="menu-item-description ">Video tutorials</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://heap.io/contact-sales">Contact Us</a></li>
-<li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="/login">Log In</a></li>
-<li id="menu-item-135" class="nav-cta menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="/free-trial"><span class="inner-button"><svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-			<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-			</svg><span class="button-text">Free Trial</span><svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-		<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-		</svg></span>
-		</a></li>
-</ul></div>		</nav><!-- .main-navigation -->
 
-		<nav id="site-navigation-mobile" class="main-navigation-mobile">
-				<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
-					<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-Reverse-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
-				<div class="main-navigation-mobile__container-mobile">
-					<span class="icon-Nav-Mobile---Menu"></span>Menu
-				</div>
-				<div id="mobile-menu" class="main-navigation-mobile__mobile-menu">
-				<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
-					<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">				</a>
-				<a href="javascript:void(0)" class="main-navigation-mobile__mobile-menu__closebtn"><span class="icon-Nav-Mobile---X"></span></a>
-				<div class="main-navigation-mobile__mobile-menu__container">
-				<div class="menu-header-menu-container"><ul id="header-menu" class="menu"><li class="three-col menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-9273"><a title="Product" href="https://heap.io/product/product-analytics">Product</a>
-<ul class="submenu" role="menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-272"><div title="Foundation" href="#">Foundation</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a title="Autocapture" href="https://heap.io/product/autocapture">Autocapture<p class="menu-item-description ">Codelessly capture every interaction with your product</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12959"><a title="APIs" href="https://heap.io/apis">APIs<p class="menu-item-description ">Give context to autocaptured events</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12960"><a title="Sources" href="https://heap.io/sources">Sources<p class="menu-item-description ">Import data from other tools</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-12956"><div title="Heap Data Engine" href="https://heap.io/heap-data-engine">Heap Data Engine</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12961"><a title="Event Visualizer" href="https://heap.io/product/event-visualizer">Event Visualizer<p class="menu-item-description ">Easily locate and name events </p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12958"><a title="Data Dictionary" href="https://heap.io/data-dictionary">Data Dictionary<p class="menu-item-description ">Keep data clean and organized</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12957"><a title="Governance" href="https://heap.io/governance">Governance<p class="menu-item-description ">Ensure everyone is using the same data</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10306"><a title="Security &#038; Compliance" href="https://heap.io/product/security-compliance">Security &#038; Compliance<p class="menu-item-description ">Safeguard your data and secure your business</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-273"><div title="Product Analytics" href="#">Product Analytics</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269"><a title="Analyze" href="https://heap.io/product/product-analytics">Analyze<p class="menu-item-description ">Use behavioral data to build an exceptional product</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13852"><a title="Act" href="https://heap.io/act">Act<p class="menu-item-description ">Turn insights into actions, across the organization</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10416"><a title="Connect" href="https://heap.io/product/connect">Connect<p class="menu-item-description ">Bring behavioral data to your warehouse</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-15068"><a title="Solutions" href="https://heap.io/heap-for-saas">Solutions</a>
-<ul class="submenu" role="menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-164"><div title="Use Cases" href="#">Use Cases</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"><a title="Conversion Rate Optimization" href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization<p class="menu-item-description ">Improve funnel performance</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a title="Activation" href="https://heap.io/solutions/activation">Activation<p class="menu-item-description ">Show users immediate value</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a title="Engagement" href="https://heap.io/solutions/engagement">Engagement<p class="menu-item-description ">Drive key user actions</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a title="Retention" href="https://heap.io/solutions/retention">Retention<p class="menu-item-description ">Reduce customer churn</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children nav-grid menu-item-14476"><div title="Industries" href="https://heap.io/industries">Industries</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a title="Heap for SaaS" href="https://heap.io/heap-for-saas">Heap for SaaS<p class="menu-item-description ">Create a superlative product</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13181"><a title="Heap for Ecommerce and D2C" href="https://heap.io/heap-for-ecommerce">Heap for Ecommerce and D2C<p class="menu-item-description ">Better data for more conversions</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14472"><a title="Heap for Financial Services" href="https://heap.io/heap-for-financial-services">Heap for Financial Services<p class="menu-item-description ">Optimize the digital experience</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu-item--equal-widths menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-grid menu-item-128"><a title="Why Heap" href="/why-product-analytics">Why Heap</a>
-<ul class="submenu" role="menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15069"><div title="Why Heap?" href="#">Why Heap?</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10539"><a title="Why Product Analytics?" href="https://heap.io/why-product-analytics">Why Product Analytics?<p class="menu-item-description ">How analytics produces better products</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15070"><div title="Heap vs Competitors" href="#">Heap vs Competitors</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12190"><a title="How Heap compares" href="https://heap.io/compare">How Heap compares<p class="menu-item-description ">Why Heap is the superior alternative</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a title="Customer Stories" href="https://heap.io/customers">Customer Stories</a>
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10301"><a title="Pricing" href="https://heap.io/pricing">Pricing</a>
-</li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9334"><a title="Resources" href="/resources">Resources</a>
-<ul class="submenu" role="menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9046"><div title="Learn More" href="#">Learn More</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9047"><a title="Blog" href="https://heap.io/blog">Blog<p class="menu-item-description ">A community for product</p></a>
-</li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14488"><a title="All Resources" href="https://heap.io/resources">All Resources<p class="menu-item-description ">eBooks, Whitepapers, Videos, Guides</p></a>
-</li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12360"><a title="Events" href="/events">Events<p class="menu-item-description ">Virtual events and group demos</p></a>
-</li>
-		<li class="mb-none menu-item menu-item-type-custom menu-item-object-custom menu-item-9050"><a title="Webinars" href="https://heap.io/resource-type/webinars">Webinars<p class="menu-item-description ">Experts and authorities
-</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-15471"><div title="Our Partners" href="https://heap.io/partners">Our Partners</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15472"><a title="Heap Partners Network" href="https://heap.io/partners">Heap Partners Network<p class="menu-item-description ">Technology and Solutions Partners</p></a>
-</li>
-</ul>
-</li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-dropdown menu-item-9052"><div title="Help Center" href="#">Help Center</div>
-	<ul class="submenu" role="menu">
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9051"><a title="Help Center" href="https://help.heap.io/">Help Center<p class="menu-item-description ">How to use Heap</p></a>
-</li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10758"><a title="Heap University" href="https://learn.heap.io/">Heap University<p class="menu-item-description ">Video tutorials</p></a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></div><div class="menu-header-menu-cta-container"><ul id="header-menu-cta" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-133"><a href="https://heap.io/contact-sales">Contact Us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="/login">Log In</a></li>
-<li class="nav-cta menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="/free-trial"><span class="inner-button"><svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-			<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-			</svg><span class="button-text">Free Trial</span><svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-		<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-		</svg></span>
-		</a></li>
-</ul></div>				</div>
-			</div>
-		</nav><!-- .mobile-navigation -->
-	</div>
-</header><!-- .site-header -->
+<div id="menu">
+    <div class="menu-overlay" id="mo-1"></div>
+    <div class="menu-overlay" id="mo-2"></div>
+    <div class="wrapper wrap-padding">
+        <div class="bg-text">
+            
+            <span>
+                we do <br>
+                lots <br>
+                of stuff.
+            </span>
+            
+        </div>
+        <nav>
+            <a id="menu-trabajos" class="hoverable link hover-text " href="/en/works"><span data-text="works" class="hover-before"></span><span>works</span></a>
+            <a id="menu-nosotros" class="hoverable link hover-text " href="/en/us"><span data-text="us" class="hover-before"></span><span>us</span></a>
+            <a id="menu-enfoque" class="hoverable link hover-text " href="/en/focus"><span data-text="focus" class="hover-before"></span><span>focus</span></a>
+            <a id="menu-noticias" class="hoverable link hover-text " href="/en/news"><span data-text="news" class="hover-before"></span><span>news</span></a>
+            <a id="menu-contacto" class="hoverable link hover-text " href="/en/contact"><span data-text="contact" class="hover-before"></span><span>contact</span></a>
+            <a class="hoverable link language" href="/es" id="selector-idioma-mobile">
+                <div class="hoverable link hover-text"><span data-text="esp" class=""></span><span class="c-lightgrey">esp</span></div>
+                <div class="separator"></div>
+                <div class="hoverable link"><span data-text="eng" class="hover-before"></span><span class="">eng</span></div>            
+            </a>
+        </nav>
 
-	<div id="content" class="site-content">
+        <div id="day-night" class="mobile day-night hoverable" data-offset="-300">
+            <div>
+                <span class="t-day">
+                    light
+                    <div class="roud-overlay"></div>
+                </span>
+                <div class="separator"></div>
+                <span class="t-night">
+                    dark
+                    <div class="roud-overlay"></div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<main id="main" class="site-main">
+        <main id="main-home">
 
-		<section id="cta-iktltvot1o8-kkswcb67" class="rs-section block block-cta block-cta--short " style="margin-bottom: -18%; z-index:2" "=""><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h1 id="" class="rs-heading style--primary ">A Smarter Approach to Product</h1><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap is an analytics platform that helps product, marketing, and customer success teams craft exceptional digital experiences that convert and retain users.<br><br>We give you all of your customer data — automatically — and the tools to turn that data into action.</p><a id="" class="rs-link style--primary " target="_self" href="/free-trial">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Free Trial
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a><a id="" class="rs-link style--secondary " target="_self" href="/request-product-analytics-demo">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Get Demo
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a></div></div></section>
+            <div class="images-preload">
+                
+                    <div style="background: url('images/off_1.jpg')"></div>
+                
+                    <div style="background: url('images/1.jpg')"></div>
+                
+                    <div style="background: url('images/portada.png')"></div>
+                
+                    <div style="background: url('images/home.jpg')"></div>
+                
+                    <div style="background: url('images/9.jpg')"></div>
+                
+            </div>
+        
+            <section id="hero" class="show-me">
+                <div class="wrapper wrap-padding">
+                    <div class="enter-y delay-2">
+                        <h2 class="c-lightgrey">
+                            <strong class="c-grey"><a href="/en/us" class="link-seccion">us</a><div class="line"></div></strong> We’re a design studio with headquarters in Buenos Aires.
+                        </h2>
+                    </div>
+                    <div class="enter-y delay-4 title-mobile">
+                        <h1 class="c-grey">
+                            <span class="c-green">We create</span> innovative digital products and future-oriented brands.
+                        </h1>
+                    </div>
+                    
+                    <div class="enter-y delay-3 title-desktop">
+                        <h1 class="c-grey"><span class="c-green">We create</span> innovative</h1>
+                    </div>
+                    
+                    <div class="enter-y delay-4 title-desktop">
+                        <h1 class="c-grey">digital products and</h1>
+                    </div>
+                    
+                    <div class="enter-y delay-5 title-desktop">
+                        <h1 class="c-grey"> future-oriented brands.</h1>
+                    </div>
+                    
+        
+                    <div class="dot-scroll-down"></div>
+
+                    <div class="button-wrap enter-x delay-10">
+                        <a href="/en/contact" class="button link c-green hoverable">
+                            <span data-text="Hola, ¿hablamos?">Hi, can we talk? </span>
+                        </a>
+                    </div>
+
+                    <div class="mouse">
+                        <div class="mouse-icon">
+                            <span class="mouse-wheel"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-text">
+                    <div class="enter-y delay-15">
+                        <span>estudio/nk</span>
+                    </div>
+                </div>
+            </section>
+
+            <div id="day-night" class="day-night hoverable show-me" data-offset="-300">
+                <div class="enter-y-r delay-15">
+                    <span class="t-day">
+                        light
+                        <div class="roud-overlay"></div>
+                    </span>
+                    <div class="separator"></div>
+                    <span class="t-night">
+                        dark
+                        <div class="roud-overlay"></div>
+                    </span>
+                </div>
+            </div>
+
+            <div class="progress-container show-me delay-16" id="pc" data-offset="-300">
+                <div class="progress-bar"></div>
+            </div> 
+
+            <div class="wrapper wrap-padding"><hr></div>
+
+            <section id="featured-works" class="show-me" data-offset="-300">
+
+                <div class="wrapper wrap-padding">  
+                    <div class="enter-y">
+                        <h2 class="c-lightgrey">
+                            <strong class="c-grey"><a href="/en/works" class="link-seccion">works </a>  <div class="line"></div></strong> Since 2006 we&#39;ve been working with startups, SMEs and large companies.
+                        </h2>
+                    </div>
+                </div>
 
 
-<div id="bm"></div>
-<script src="js/lottie.min.js"></script>
-<script src="js/heaphero.js"></script>
-<style type="text/css">
-#bm {
-min-height: 385px; }
-@media  (max-width: 767px) {
-#bm { display: none; }
-}
-</style>
+                <div style="position: relative; overflow: visible">
+                    <div id="featured-slider" class="desktop swiper-container swiper-container-horizontal drag-hold enter-y delay-4" data-pointer-text="Drag and drop" style="cursor: grab; overflow: visible">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">                                    
+                                <a data-id="1" href="/en/works/agora" data-img="/img/trabajos/Agora/off.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                    <h4 class="hover-text not-hover"><span data-text="Agora" class="hover-before"></span>Agora</h4>
+                                    <div class="button-wrap mobile">
+                                        <div class="button c-green">
+                                            <span data-text="See details">See details</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="swiper-slide">                                    
+                                <a data-id="2" href="/en/works/usn" data-img="/img/trabajos/USN/1.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                    <h4 class="hover-text not-hover"><span data-text="USN" class="hover-before"></span>USN</h4>
+                                    <div class="button-wrap mobile">
+                                        <div class="button c-green">
+                                            <span data-text="See details">See details</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="swiper-slide">                                    
+                                <a data-id="3" href="/en/works/martin-alaimo" data-img="/img/trabajos/Martin-Alaimo/portada.png" class="text hoverable link hover" data-pointer-text="See details">
+                                    <h4 class="hover-text not-hover"><span data-text="Alaimo" class="hover-before"></span>Alaimo</h4>
+                                    <div class="button-wrap mobile">
+                                        <div class="button c-green">
+                                            <span data-text="See details">See details</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="swiper-slide">                                    
+                                <a data-id="4" href="/en/works/voy-en-auto" data-img="/img/trabajos/Vea/home.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                    <h4 class="hover-text not-hover"><span data-text="VEA" class="hover-before"></span>VEA</h4>
+                                    <div class="button-wrap mobile">
+                                        <div class="button c-green">
+                                            <span data-text="See details">See details</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="swiper-slide">                                    
+                                <a data-id="5" href="/en/works/fresco" data-img="/img/trabajos/Fresco/9.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                    <h4 class="hover-text not-hover"><span data-text="Fresco" class="hover-before"></span>Fresco</h4>
+                                    <div class="button-wrap mobile">
+                                        <div class="button c-green">
+                                            <span data-text="See details">See details</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>                
+                    </div>
+                </div>
 
+                <div class="wrapper wrap-padding">  
+                    <div id="featured-slider-mobile" class="mobile swiper-container swiper-container-horizontal drag-hold">
+                            <div class="swiper-wrapper">
+                            
+                                <div class="swiper-slide">                                    
+                                    <a data-id="1" href="/en/works/agora" data-img1="/img/trabajos/Agora/off.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" style="background-image: url('images/off_1.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h1 class="c-grey">Agora</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="swiper-slide">                                    
+                                    <a data-id="2" href="/en/works/usn" data-img1="/img/trabajos/USN/1.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" style="background-image: url('images/1.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h1 class="c-grey">USN</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="swiper-slide">                                    
+                                    <a data-id="3" href="/en/works/martin-alaimo" data-img1="/img/trabajos/Martin-Alaimo/portada.png" class="text hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" style="background-image: url('images/portada.png')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h1 class="c-grey">Martin Alaimo</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="swiper-slide">                                    
+                                    <a data-id="4" href="/en/works/voy-en-auto" data-img1="/img/trabajos/Vea/home.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" style="background-image: url('images/home.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h1 class="c-grey">Voy en auto</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="swiper-slide">                                    
+                                    <a data-id="5" href="/en/works/fresco" data-img1="/img/trabajos/Fresco/9.jpg" class="text hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" style="background-image: url('images/9.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h1 class="c-grey">Fresco</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                            </div>                
+                    </div>
+                </div>
 
-<section class="rs-section block block-logo-band block-logo-band--purple"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--secondary ">Over 6,000 companies build better products with Heap</h2><div class="rs-container has-6-columns mobile-landscape-has-3-columns mobile-portrait-has-2-columns"><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/twilio-white-350w-300x99.png.webp 300w, images/twilio-white-350w-150x115.png.webp 150w, images/twilio-white-350w.png.webp 350w"><source srcset="images/twilio-white-350w-300x99.png 300w, images/twilio-white-350w-150x115.png 150w, images/twilio-white-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/twilio-white-350w.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/twilio-red-350w-300x98.png.webp 300w, images/twilio-red-350w-150x114.png.webp 150w, images/twilio-red-350w.png.webp 350w"><source srcset="images/twilio-red-350w-300x98.png 300w, images/twilio-red-350w-150x114.png 150w, images/twilio-red-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/twilio-red-350w.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/esurance-350w-300x139.png.webp 300w, images/esurance-350w-150x150.png.webp 150w, images/esurance-350w.png.webp 350w"><source srcset="images/esurance-350w-300x139.png 300w, images/esurance-350w-150x150.png 150w, images/esurance-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/esurance-350w.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/esurance-red-350w-300x139.png.webp 300w, images/esurance-red-350w-150x150.png.webp 150w, images/esurance-red-350w.png.webp 350w"><source srcset="images/esurance-red-350w-300x139.png 300w, images/esurance-red-350w-150x150.png 150w, images/esurance-red-350w.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/esurance-red-350w.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customers"><picture class="rs-image"><source type="image/webp" srcset="images/cloudflare-1-300x90.png.webp 300w, images/cloudflare-1-150x150.png.webp 150w, images/cloudflare-1-768x229.png.webp 768w, images/cloudflare-1.png.webp 874w"><source srcset="images/cloudflare-1-300x90.png 300w, images/cloudflare-1-150x150.png 150w, images/cloudflare-1-768x229.png 768w, images/cloudflare-1.png 874w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/cloudflare-1.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/cloudflare-red2-300x90.png.webp 300w, images/cloudflare-red2-150x150.png.webp 150w, images/cloudflare-red2-768x229.png.webp 768w, images/cloudflare-red2.png.webp 874w"><source srcset="images/cloudflare-red2-300x90.png 300w, images/cloudflare-red2-150x150.png 150w, images/cloudflare-red2-768x229.png 768w, images/cloudflare-red2.png 874w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/cloudflare-red2.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/opploans"><picture class="rs-image"><source type="image/webp" srcset="images/OppLoans_Logo-Band_white-150x74.png.webp 150w, images/OppLoans_Logo-Band_white.png.webp 300w"><source srcset="images/OppLoans_Logo-Band_white-150x74.png 150w, images/OppLoans_Logo-Band_white.png 300w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/OppLoans_Logo-Band_white.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/OppLoans_Logo-Band_Red-150x74.png.webp 150w, images/OppLoans_Logo-Band_Red.png.webp 300w"><source srcset="images/OppLoans_Logo-Band_Red-150x74.png 150w, images/OppLoans_Logo-Band_Red.png 300w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/OppLoans_Logo-Band_Red.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/lending-club"><picture class="rs-image"><source type="image/webp" srcset="images/lendingclub_white-300x57.png.webp 300w, images/lendingclub_white-150x67.png.webp 150w, images/lendingclub_white.png.webp 350w"><source srcset="images/lendingclub_white-300x57.png 300w, images/lendingclub_white-150x67.png 150w, images/lendingclub_white.png 350w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/lendingclub_white.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/lendingclub_red2-300x57.png.webp 300w, images/lendingclub_red2-150x67.png.webp 150w, images/lendingclub_red2.png.webp 350w"><source srcset="images/lendingclub_red2-300x57.png 300w, images/lendingclub_red2-150x67.png 150w, images/lendingclub_red2.png 350w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/lendingclub_red2.png">
-            </picture></a></div><div class="block__column"><a class="block-logo-band__item" href="https://heap.io/customer-stories/splunk-uses-product-analytics-to-win?autoplay=true"><picture class="rs-image"><source type="image/webp" srcset="images/splunk-logo-300x89.png.webp 300w, images/splunk-logo-150x135.png.webp 150w, images/splunk-logo.png.webp 455w"><source srcset="images/splunk-logo-300x89.png 300w, images/splunk-logo-150x135.png 150w, images/splunk-logo.png 455w"> <img id="" class="rs-image block-logo-band__image-original pilot-align-left" alt="" src="images/splunk-logo.png">
-            </picture><picture class="rs-image"><source type="image/webp" srcset="images/splunk-logo-red2-300x89.png.webp 300w, images/splunk-logo-red2-150x135.png.webp 150w, images/splunk-logo-red2.png.webp 455w"><source srcset="images/splunk-logo-red2-300x89.png 300w, images/splunk-logo-red2-150x135.png 150w, images/splunk-logo-red2.png 455w"> <img id="" class="rs-image block-logo-band__image-hover hide pilot-align-left" alt="" src="images/splunk-logo-red2.png">
-            </picture></a></div></div></div></div></section>
+                <div class="wrapper wrap-padding">
+                    <div class="imgs enter-y desktop">
+                        
+                            <div data-id="1" class="active"> <div class="bg" style="background-image: url('images/off_1.jpg')"></div> </div>
+                        
+                            <div data-id="2" class=""> <div class="bg" style="background-image: url('images/1.jpg')"></div> </div>
+                        
+                            <div data-id="3" class=""> <div class="bg" style="background-image: url('images/portada.png')"></div> </div>
+                        
+                            <div data-id="4" class=""> <div class="bg" style="background-image: url('images/home.jpg')"></div> </div>
+                        
+                            <div data-id="5" class=""> <div class="bg" style="background-image: url('images/9.jpg')"></div> </div>
+                        
+                    </div>
+                    <!--<div class="imgs enter-y mobile">
+                        <div data-id="1" class="active"> <div class="bg" id="h-target" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="2"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="3"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="4"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="5"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="6"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                        <div data-id="7"> <div class="bg" style="background-image: url(/img/featured.jpg)"></div> </div>
+                    </div>-->
 
-<section id="fifty-fifty-p3xk6ngtnep-ke0fhp7x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Measure Everything, All The Time</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Measure everything</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap gives you a complete dataset of every interaction with your product. Every click. Every tap. Every swipe. There’s no code to implement, and no need to decide in advance what to track.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/autocapture">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Learn more about Autocapture
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><div id="" src="https://heap.wistia.com/medias/86gtp08hct" class="pilot-embed pilot-embed-16by9 pilot-align-left" style="width: 100%;"><iframe title="Heap - A Smarter Approach to Product Video" src="86gtp08hct.html" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen msallowfullscreen="" width="500" height="281"></iframe><script src="js/E-v1.js" async></script></div></div></div></section>
+                    <div class="down">
+                        <div id="counter-wrap" data-count="5">
+                            
+                                <span data-slide-count="1">1</span>
+                            
+                                <span data-slide-count="2">2</span>
+                            
+                                <span data-slide-count="3">3</span>
+                            
+                                <span data-slide-count="4">4</span>
+                            
+                                <span data-slide-count="5">5</span>
+                            
+                        </div>
+                        <div class="button-wrap">
+                            <a href="/en/works" class="button link c-green hoverable">
+                                <span data-text="See all projects">See all projects</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-<section id="fifty-fifty-3ccf4kltsxj-ke0fhp8h" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Improve the Customer Journey</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Conversion, Retention, and more</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>Heap helps you improve every part of the customer journey: <a href="https://heap.io/solutions/activation">activation</a>, acquisition, <a href="https://heap.io/solutions/retention">retention</a>, revenue, and referral.<br><br>Use data to increase conversion and grow lifetime value.</p><ul id="" class="rs-list rs-list--unordered style--secondary has-body-font-size-lg "><li>Quickly get users to your “Aha” moments</li><li>Analyze funnels to reduce moments of friction</li><li>Improve <a href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization </a>(CRO) across your user base</li><li>Segment users by behavior to personalize their experience</li></ul><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png.webp 300w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png.webp 1024w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png.webp 150w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png.webp 768w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png.webp 1536w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png.webp 2048w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png.webp 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png.webp 2952w"><source data-srcset="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-300x199.png 300w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1024x680.png 1024w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-150x150.png 150w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-768x510.png 768w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1536x1020.png 1536w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-2048x1360.png 2048w, https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x-1600x1062.png 1600w, /wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Improve-the-Customer-Journey@4x.png">
-            </picture></div></div></section>
+            </section>
 
-<section class="rs-section block block-post-gallery"><div class="rs-container rs-container--container"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Hear from our customers</h2><p id="" class="rs-paragraph style--secondary has-body-font-size-lg ">We help companies in SaaS, fintech, mobile, eCommerce, media, and more</p><div id="" class="rs-container has-3-columns mobile-landscape-has-3-columns mobile-portrait-has-1-columns "><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/huel" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2021/02/Huel_Logo_large_5-768x402.jpg" alt="Heap Helps Huel Get Granular Detail in Minutes, Not Days" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Heap Helps Huel Get Granular Detail in Minutes, Not Days</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“With Heap, my team knows why things happen.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/huel">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/snapfish" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2020/12/download-1-768x403.png" alt="Snapfish Uses Heap&#8217;s Omni-Channel Tracking to Increase Conversions" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Snapfish Uses Heap&#8217;s Omni-Channel Tracking to Increase Conversions</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">“Heap will solve your pain for instrumenting mobile apps and tracking users across channels. End of story.”</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/snapfish">Read More</span></div></a></div></div><div class="hover-glow"><div class="block-post-gallery__post-item rs-card rs-card--text full-image"><a href="https://heap.io/customer-stories/northwestern-mutual" class="block-post-gallery__post-item-link"><img class="rs-image rs-image--full rs-post-gallery__post-item__image" data-src="https://heap.io/wp-content/uploads/2020/11/northwestern-mutual-1.svg" alt="Northwestern Mutual becomes data-driven with Heap" data-lazy="true"><div class="rs-card--content">
-		<div class="rs-card--push"><h5 class="rs-heading rs-heading--sub style--alternate block-post-gallery__post-item__category"></h5><h4 class="block-post-gallery__post-item__title rs-heading style--primary">Northwestern Mutual becomes data-driven with Heap</h4><p class="rs-paragraph style--primary block-post-gallery__post-item__excerpt" data-excerpt-length="120">&#8220;Heap has that ‘anything is possible’ kind of capability.&#8221;</p></div><span class="rs-link style--link-arrow block-post-gallery__post-item__link" href="https://heap.io/customer-stories/northwestern-mutual">Read More</span></div></a></div></div></div></div></div></section>
+            <div class="wrapper wrap-padding"><hr></div>
+            
+            <section id="reconocimiento" class="show-me">
+                <div class="wrapper wrap-padding" id="e1">
+                    <div class="enter-y">
+                        <h2 class="c-lightgrey">
+                            <strong class="c-grey"> <a href="/en/us?awards" class="link-seccion"> global recognition </a><div class="line"></div></strong> we´re all about making clients happy
+                        </h2>
+                    </div>
+                    <div class="enter-y delay-3 title-mobile">
+                        <h1 class="c-grey">
+                            Nominated in 2016, 2017, 2018 and 2020 as  <span class="c-green">the best agency of the year.</span>
+                        </h1>
+                    </div>
+                    
+                    <div class="enter-y delay-3 title-desktop">
+                        <h1 class="c-grey">Nominated in 2016,</h1>
+                    </div>
+                    
+                    <div class="enter-y delay-4 title-desktop">
+                        <h1 class="c-grey">2017, 2018 and 2020 as</h1>
+                    </div>
+                    
+                    <div class="enter-y delay-5 title-desktop">
+                        <h1 class="c-grey"><span class="c-green">the best agency of the year.</span></h1>
+                    </div>
+                    
+                    <div class="text-down">
+                        <h2 class="c-lightgrey enter-y delay-5">We were the only ones in Latin America and Argentina respectively (Awwwards ´16, ´17, ´20 — CSS Design Awards ´16, ´17, ´18)</h2>
+                    </div>
+                </div>
+                <div class="wrapper wrap-padding" style="cursor: grab; overflow: visible;" data-pointer-text="Drag and drop">
+                    <div class="logos-slide enter-y delay-7" style="overflow: visible;">
+                        <div id="logos-slider" class="swiper-container swiper-container-horizontal drag-hold" style="overflow: visible;">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="1">
+                                        <img class="svg" src="fonts/awwwards.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="2">
+                                        <img class="svg" src="fonts/fwa.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="3">
+                                        <img class="svg" src="fonts/cssda.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="4">
+                                        <img class="svg" src="fonts/brandnew.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="5">
+                                        <img class="svg" src="fonts/sbd.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="6">
+                                        <img class="svg" src="fonts/germandesignaward.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <div class="img" data-id="7">
+                                        <img class="svg" src="fonts/startupperu.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>                
+                        </div>
+                    </div>
+                    <div class="down" id="ed1" data-offset="-300">
+                        <div id="counter-wrap" data-count="7">
+                            
+                                <span data-slide-count="1">1</span>
+                            
+                                <span data-slide-count="2">2</span>
+                            
+                                <span data-slide-count="3">3</span>
+                            
+                                <span data-slide-count="4">4</span>
+                            
+                                <span data-slide-count="5">5</span>
+                            
+                                <span data-slide-count="6">6</span>
+                            
+                                <span data-slide-count="7">7</span>
+                            
+                            
+                        </div>
+                        <div class="button-wrap enter-y delay-5">
+                            <a href="/en/us?awards" class="button link c-green hoverable">
+                                <span data-text="/See all awards">See all awards</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<section id="fifty-fifty-ppr01iq25bh-ke0fhp89" class="rs-section block block-fifty-fifty block-fifty-fifty--rightleft "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png.webp 300w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png.webp 1024w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png.webp 150w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png.webp 768w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png.webp 1536w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png.webp 2048w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png.webp 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png.webp 2952w"><source data-srcset="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-300x149.png 300w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1024x507.png 1024w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-150x150.png 150w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-768x380.png 768w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1536x761.png 1536w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-2048x1014.png 2048w, https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x-1600x792.png 1600w, /wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png 2952w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Data-for-Hard-Product-Decisions@4x.png">
-            </picture></div><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">Data for Hard Product Decisions</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">data for decisions</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><br>Data is worthless if it doesn’t help you make better decisions. Heap was built to answer the hard questions: What to build? How are people using our features? How to measure impact?<br><br>Heap tells you how people use your product. Where users get stuck. What features they love. What features they don’t.<br><br>Then we help you turn those insights into action.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/product-analytics">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Learn more about Product Analytics
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div></div></section>
+            <div class="wrapper wrap-padding"><hr></div>
 
-<section class="rs-section block block-image-grid block-image-grid--inverted"><div class="rs-container rs-container--container has-12-columns mobile-landscape-has-6-columns"><div class="block__column spans-12 mobile-landscape-spans-6 text-cards__masonry mobile-portrait-spans-6"><div class="text-cards__masonry-container"><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Configuration@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Configuration@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">The era of track(‘event’) is over</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">For years, analytics vendors required writing <strong>track(&#8216;event&#8217;)</strong> for each interaction. Heap eliminates this requirement, autocapturing a complete customer dataset and letting you model it any way you need</p><a id="" class="rs-link style--alternate-text " target="_self" href="/product/autocapture">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Learn about Autocapture
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Growth@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Growth@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Growth@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Mobile + Web</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Heap automatically merges web and mobile visits into a single user identity. No more manually assembling information.</p></div></div><div class="text-cards__masonry--card"> <div class="rs-card style--primary"><picture class="rs-image"><source type="image/webp" data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png.webp 80w"><source data-srcset="/wp-content/uploads/2020/03/Trophy@2x.png 80w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/03/Trophy@2x.png">
-            </picture><h2 id="" class="rs-heading rs-heading--sub style--primary ">Robust integrations</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Import data from tools like Salesforce, Marketo, Mailchimp, and Optimizely. Then combine it with Heap data and easily output—via managed ELT—to Snowflake, BigQuery, or other data warehouses.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/product/connect">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Learn about Heap Connect
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a></div></div></div></div></div></section>
+            <section id="enfoque">
+                <div class="wrapper wrap-padding">
+                    <div class="show-me" id="e1">
+                        <div class="enter-y">
+                            <h2 class="c-lightgrey">
+                                <strong class="c-grey"> <a href="/en/us" class="link-seccion"> focus </a><div class="line"></div></strong> We have 2 hiring modalities, 4 work stages, and more than 27 services.
+                            </h2>
+                        </div>
+                        <div class="enter-y delay-4 title-mobile">
+                            <h1 class="c-grey">
+                                <span class="c-green">We encourage</span> a positive change for people, companies and organizations.
+                            </h1>
+                        </div>
+                        
+                        <div class="enter-y delay-3 title-desktop">
+                            <h1 class="c-grey"><span class="c-green">We encourage</span> a positive</h1>
+                        </div>
+                        
+                        <div class="enter-y delay-4 title-desktop">
+                            <h1 class="c-grey">change for people, companies</h1>
+                        </div>
+                        
+                        <div class="enter-y delay-5 title-desktop">
+                            <h1 class="c-grey"> and organizations</h1>
+                        </div>
+                        
+                    </div>
 
-<section id="fifty-fifty-aghzq2m1cb8-ke0fhp8x" class="rs-section block block-fifty-fifty block-fifty-fifty--leftright "><div class="rs-container rs-container--container has-2-columns"><div class="block__column"><div class="block-fifty-fifty__logo"></div><h2 id="" class="rs-heading style--primary ">The Heap Guide to Conversion Rate Optimization</h2><h2 id="" class="rs-heading rs-heading--sub style--primary ">Latest ebook</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl "><a href="https://heap.io/topics/conversion-rate-optimization-for-marketing-product-teams">Conversion rate optimization (CRO)</a> takes creativity and diligence. But there is — absolutely — a systematic way to do it right. And we’re thrilled to share it with you!<br><br>Enter <strong>The Heap Guide to Conversion Rate Optimization (CRO)</strong>. In it we gather learnings from many years of helping customers to lay out a systematic, repeatable approach to improving conversion, in all verticals.</p><a id="" class="rs-link style--alternate-text " target="_self" href="https://heap.io/ebook-heap-guide-to-cro">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Download the ebook
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a><h2 id="" class="block-fifty-fifty__icon-heading style--primary "></h2><div class="block-fifty-fifty__icons block-fifty-fifty__icons--1"><div class="block-fifty-fifty__icon"></div></div></div><div class="block__column"><picture class="rs-image"><source type="image/webp" data-srcset="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg.webp 300w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg.webp 1024w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg.webp 150w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg.webp 768w, /wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg.webp 1392w"><source data-srcset="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-300x157.jpg 300w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-1024x536.jpg 1024w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-150x150.jpg 150w, https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100-768x402.jpg 768w, /wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg 1392w"> <img id="" class="rs-image pilot-align-left" alt="" data-lazy="true" data-src="https://heap.io/wp-content/uploads/2020/10/Heap_CRO_eBook_LP_Image_Ad-A_L1R1@2x-100.jpg">
-            </picture></div></div></section>
+                    <div class="placas show-me" id="e2">
+                        
+                        <a href="/en/focus" class="link placa hoverable" data-pointer-text="Learn more">
+                            <div class="enter-y delay-1">
+                                <h5 class="c-grey">Strategy and Consulting</h5>
+                            </div>
+                            <div class="enter-y delay-3">
+                                <p class="c-lightgrey">A client-driven work model that allows us to make a thorough analysis to define a diagnostic and an action plan.</p>
+                            </div>
+                            <div class="enter-y delay-5 mobile">
+                                <div class="button c-green"><span data-text="Learn more">Learn more</span></div>
+                            </div>
+                        </a>
+                        
+                        <a href="/en/focus" class="link placa hoverable" data-pointer-text="Learn more">
+                            <div class="enter-y delay-1">
+                                <h5 class="c-grey">Design and Development</h5>
+                            </div>
+                            <div class="enter-y delay-3">
+                                <p class="c-lightgrey">A work model aimed at solving specific needs with turnkey design, development and consulting solutions.</p>
+                            </div>
+                            <div class="enter-y delay-5 mobile">
+                                <div class="button c-green"><span data-text="Learn more">Learn more</span></div>
+                            </div>
+                        </a>
+                        
+                    </div>
 
-<section id="cta-0h463cd1z9o7-ke0fhp97" class="rs-section block block-cta block-cta--short "><div class="rs-container rs-container--container has-1-columns"><div class="block__column"><h2 id="" class="rs-heading style--primary ">Getting started is easy</h2><p id="" class="rs-paragraph style--primary has-body-font-size-xl ">Interested in a demo of Heap’s Product Analytics platform? <br>We’d love to chat with you!</p><a id="" class="rs-link style--primary " target="_blank" href="/request-product-analytics-demo">
-	<span class="inner-button">
-	<svg class="button-before" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M0 57H3L13 1H9.94318L0 28.5V57Z" fill="#ED485F"/>
-	<path d="M3 57H1V28.5L10.9432 1H13" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	<span class="button-text">
-	 Get demo
-	</span>
-	<svg class="button-after" viewbox="0 0 13 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M13 1H10L0 57H3.05682L13 29.5V1Z" fill="#ED485F"/>
-	<path d="M10 1H12V29.5L2.05682 57H0" stroke="#ED485F" stroke-width="2"/>
-	</svg>
-	</span>
-	</a></div></div></section>
+                    <div class="down show-me" id="ed1" data-offset="-300">
+                        <div class="button-wrap enter-y delay-5">
+                            <a href="/en/focus" class="button link c-green hoverable">
+                                <span data-text="/Discover our focus">Discover our focus</span>
+                            </a>
+                        </div>
+                    </div>
 
+                </div>
+            </section>
 
-	</main><!-- .site-main -->
+            <div class="wrapper wrap-padding"><hr></div>
 
+            <section id="noticias" class="show-me">
 
+                <div class="wrapper wrap-padding">
+                    <div class="enter-y">
+                        <h2 class="c-lightgrey">
+                            <strong class="c-grey"> <a href="/en/news" class="link-seccion"> news </a><div class="line"></div></strong> Find out everything that happens at the studio
+                        </h2>
+                    </div>
+                </div>
 
-<footer class="site-footer">
-	<div class="site-footer__grid rs-container rs-container--container">
-		<div class="site-footer__footer-info">
-			<a href="https://heap.io/" title="Heap" class="main-navigation__logo">
-				<img src="fonts/Heap-RGB_Logo-Horizontal-Lockup-Color-1.svg" class="attachment-full size-full" alt="" height="211" width="607">			</a>
-			<p class="rs-paragraph style--alternate">Power your business decisions with truth.</p>
-		</div>
-		<nav class="site-footer__footer-solutions site-footer__footer-menu">
-	<h5 class="rs-heading has-heading-font-size-xs">Solutions</h5>
-	<div class="menu-solutions-container"><ul id="menu-solutions" class="menu"><li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="https://heap.io/solutions/conversion-rate-optimization">Conversion Rate Optimization</a></li>
-<li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="https://heap.io/solutions/activation">Activation</a></li>
-<li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="https://heap.io/solutions/engagement">Engagement</a></li>
-<li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="https://heap.io/solutions/retention">Retention</a></li>
-</ul></div></nav>
-<nav class="site-footer__footer-resources site-footer__footer-menu">
-	<h5 class="rs-heading has-heading-font-size-xs">Resources</h5>
-	<div class="menu-resources-container"><ul id="menu-resources" class="menu"><li id="menu-item-149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"><a href="https://heap.io/resources">All Resources</a></li>
-<li id="menu-item-11570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11570"><a href="https://heap.io/covid-19-resources">COVID-19 Resources</a></li>
-<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://heap.io/blog">Blog</a></li>
-<li id="menu-item-14939" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14939"><a href="https://heap.io/topics">Topics</a></li>
-<li id="menu-item-12359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12359"><a href="/events">Events</a></li>
-<li id="menu-item-151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-151"><a href="https://help.heap.io/">Help Center</a></li>
-<li id="menu-item-152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-152"><a href="https://learn.heap.io/">Heap University</a></li>
-<li id="menu-item-10318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10318"><a href="https://heap.io/pricing">Pricing</a></li>
-<li id="menu-item-12189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12189"><a href="https://heap.io/compare">How Heap compares</a></li>
-<li id="menu-item-13150" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13150"><a href="https://heap.io/topics/what-is-product-analytics">Product Analytics</a></li>
-</ul></div></nav>
-<nav class="site-footer__footer-product site-footer__footer-menu">
-	<h5 class="rs-heading has-heading-font-size-xs">Product</h5>
-	<div class="menu-product-container"><ul id="menu-product" class="menu"><li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="https://heap.io/product/product-analytics">Product Analytics Software</a></li>
-<li id="menu-item-13610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13610"><a href="https://heap.io/heap-data-engine">Heap Data Engine</a></li>
-<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="https://heap.io/product/autocapture">Autocapture</a></li>
-<li id="menu-item-147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-147"><a href="https://heap.io/product/virtual-events">Virtual Events</a></li>
-<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="https://heap.io/product/data-governance">Data Governance</a></li>
-<li id="menu-item-10316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10316"><a href="https://heap.io/product/security-compliance">Security &#038; Compliance</a></li>
-</ul></div></nav>
-<nav class="site-footer__footer-company site-footer__footer-menu">
-	<h5 class="rs-heading has-heading-font-size-xs">Company</h5>
-	<div class="menu-company-container"><ul id="menu-company" class="menu"><li id="menu-item-10348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10348"><a href="https://heap.io/about">About</a></li>
-<li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="https://heap.io/customers">Customers</a></li>
-<li id="menu-item-15473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15473"><a href="https://heap.io/partners">Partners</a></li>
-<li id="menu-item-10338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10338"><a href="https://heap.io/careers">Careers</a></li>
-<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-140"><a href="https://heap.io/contact-sales">Contact Us</a></li>
-<li id="menu-item-1054" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1054"><a href="/privacy">Privacy</a></li>
-<li id="menu-item-1055" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1055"><a href="/terms">Terms</a></li>
-</ul></div></nav>
-	</div>
-	<div class="site-footer__copyright rs-container rs-container--container">
-		<p class="rs-paragraph style--alternate">&copy; 2021 Heap, Inc.</p>
-	</div>
-</footer><!-- .site-footer -->
+                <!-- TODO imgs -->
+                <div class="wrapper wrap-padding" style="cursor: grab; overflow: visible;" data-pointer-text="Drag and drop">
+                    <div class="noticias-slide enter-y delay-3" style="overflow: visible;">
+                        <div id="noticias-slider" class="swiper-container swiper-container-horizontal drag-hold" style="overflow: visible;">
+                            <div class="swiper-wrapper">
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/five-starts-review-in-clutch" data-id="1" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/clutch/off.jpg" data-img2="/img/noticias/clutch/over.jpg" style="background-image: url('images/off.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/clutch/off.jpg" data-img2="/img/noticias/clutch/over.jpg" style="background-image: url('images/over.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">January 15, 2021</small>
+                                            <h5 class="c-grey">We received 5 start in Clutch</h5>
+                                            <p class="c-lightgrey limit-text">Clutch is a ratings and reviews platform that provides amazing information to the B2B industry</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/german-design-award" data-id="2" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/german-design-award/off.jpg" data-img2="/img/noticias/german-design-award/over.jpg" style="background-image: url('images/off_2.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/german-design-award/off.jpg" data-img2="/img/noticias/german-design-award/over.jpg" style="background-image: url('images/over_1.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">April 24, 2020</small>
+                                            <h5 class="c-grey">German Design Award 2021</h5>
+                                            <p class="c-lightgrey limit-text">3rd time nominated at German Design Awards</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/19-things-of-this-2019" data-id="3" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/19-cosas-de-este-2019/2019.jpg" data-img2="/img/noticias/19-cosas-de-este-2019/2019-over.jpg" style="background-image: url('images/2019.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/19-cosas-de-este-2019/2019.jpg" data-img2="/img/noticias/19-cosas-de-este-2019/2019-over.jpg" style="background-image: url('images/2019-over.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">Janury 22, 2020</small>
+                                            <h5 class="c-grey">19 things of <br>this 2019</h5>
+                                            <p class="c-lightgrey limit-text">Mati, Emi, Mar, Axel, Lucas, Vicky and Facu want to share 19 great things we did in this 2019.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/new-offices-same-feeling" data-id="4" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/oficinas/bue/01.jpg" data-img2="/img/noticias/oficinas/mdq/02.jpg" style="background-image: url('images/01.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/oficinas/bue/01.jpg" data-img2="/img/noticias/oficinas/mdq/02.jpg" style="background-image: url('images/02.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">August 22, 2019</small>
+                                            <h5 class="c-grey">New Offices, Same Feeling</h5>
+                                            <p class="c-lightgrey limit-text">These are our brand new offices in Buenos Aires and Mar del Plata! It’s one more step we take as a company, consolidating what we lived and looking forward to the future.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/introducing-new-nk" data-id="5" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/nuevoNK/1.jpg" data-img2="/img/noticias/nuevoNK/2.jpg" style="background-image: url('images/1_1.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/nuevoNK/1.jpg" data-img2="/img/noticias/nuevoNK/2.jpg" style="background-image: url('images/2_1.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">May 2, 2019</small>
+                                            <h5 class="c-grey">Introducing the new nk</h5>
+                                            <p class="c-lightgrey limit-text">We are happy to present you our new identity. <br> All these years, we’ve been working with different brands and industries in branding, strategy, web development, e-commerce and lots of other stuff. In all projects, we had the same baseline: re-discover the essence to leverage the business. <br> So, by realizing we could do so many things for others, we wondered: Why don’t we do for us what we do for others? That’s how this process began, but now we had the toughest client: us.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/we-are-jury" data-id="6" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/Jurados/1.jpg" data-img2="/img/noticias/Jurados/2.jpg" style="background-image: url('images/1_4.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/Jurados/1.jpg" data-img2="/img/noticias/Jurados/2.jpg" style="background-image: url('images/2.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">March 6, 2019</small>
+                                            <h5 class="c-grey">We are now Awwwards' Juries</h5>
+                                            <p class="c-lightgrey limit-text">We are happy to announce that we are now part of the exclusive international panel of Awwwards 'jjryies</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/SGD" data-id="7" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/SBD/1.jpg" data-img2="/img/noticias/SBD/2.jpg" style="background-image: url('images/1_3.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/SBD/1.jpg" data-img2="/img/noticias/SBD/2.jpg" style="background-image: url('images/2_3.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">October 10, 2018</small>
+                                            <h5 class="c-grey">Seal to Good Design</h5>
+                                            <p class="c-lightgrey limit-text">By mid-2018, we were invited by the National Ministry of Production, within the frame of the National Design Plan, to participate in “Sello del Buen Diseño Argentino” (“Argentine Seal to Good Design”, SBD). The SBD rewards national companies that, in some way or another, have invested in design (in terms of product development or communicational pieces), promoting and fostering design as a tool to leverage national production. </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/happiness" data-id="8" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/Felicidad/1.jpg" data-img2="/img/noticias/Felicidad/2.jpg" style="background-image: url('images/1_2.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/Felicidad/1.jpg" data-img2="/img/noticias/Felicidad/2.jpg" style="background-image: url('images/2_2.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">October 4, 2017</small>
+                                            <h5 class="c-grey">Happiness and the Clients</h5>
+                                            <p class="c-lightgrey limit-text">A while ago, during our regular team meetings, and after beginning the search for new talents for the studio, we reached to a group conclusion: we really dislike the term “Human Resource” or “Human Capital”. Deeply. But not only when applied to the members of the team, but also to any member of the working community, especially, the clients.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="swiper-slide">                                    
+                                    <a href="/en/news/studio-of-the-year-2017" data-id="9" class="thumb hoverable link hover" data-pointer-text="See details">
+                                        <div class="img">
+                                            <div class="bg" data-img1="/img/noticias/Estudio2017/1.jpg" data-img2="/img/noticias/Estudio2017/2.jpg" style="background-image: url('images/1_5.jpg')"></div>
+                                            <div class="bg" data-img1="/img/noticias/Estudio2017/1.jpg" data-img2="/img/noticias/Estudio2017/2.jpg" style="background-image: url('images/2_4.jpg')"></div>
+                                        </div>
+                                        <div class="text">
+                                            <small class="c-grey">December 22, 2017</small>
+                                            <h5 class="c-grey">Studio of the Year 2017</h5>
+                                            <p class="c-lightgrey limit-text">We’re proud to have such a talented team, and happy to have clients that are willing to go the extra mile. This is the result of the great job that we did that year.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                            </div>                
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="wrapper wrap-padding" style="cursor: grab;">
+                    <div class="down">
+                        <div id="counter-wrap" data-count="9">
+                            
+                                <span data-slide-count="1">1</span>
+                            
+                                <span data-slide-count="2">2</span>
+                            
+                                <span data-slide-count="3">3</span>
+                            
+                                <span data-slide-count="4">4</span>
+                            
+                                <span data-slide-count="5">5</span>
+                            
+                                <span data-slide-count="6">6</span>
+                            
+                                <span data-slide-count="7">7</span>
+                            
+                                <span data-slide-count="8">8</span>
+                            
+                                <span data-slide-count="9">9</span>
+                            
+                            
+                        </div>
+                        <div class="button-wrap">
+                            <a href="/en/news" class="button link c-green hoverable">
+                                <span data-text="See all the news">Watch all the news</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-		<style name="Block Style settings">section#cta-iktltvot1o8-kkswcb67 { background: ; }</style><style name="Block Style settings">section# { background: ; }</style><style name="Block Style settings">section#fifty-fifty-p3xk6ngtnep-ke0fhp7x { background: ; }</style><style name="Block Style settings">section#fifty-fifty-3ccf4kltsxj-ke0fhp8h { background: ; }</style><style name="Block Style settings">section# { background: ; }</style><style name="Block Style settings">section#fifty-fifty-ppr01iq25bh-ke0fhp89 { background: ; }</style><style name="Block Style settings">section# { background: ; }</style><style name="Block Style settings">section#fifty-fifty-aghzq2m1cb8-ke0fhp8x { background: ; }</style><style name="Block Style settings">section#cta-0h463cd1z9o7-ke0fhp97 { background: ; }</style><style name="Block Style settings">section# { background: ; }</style><script type="text/javascript" src="js/frontend.js"></script>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var careers_departments = [{"careers_greenhouse_team":"Account Management","careers_department_page":"https:\/\/heap.io\/careers\/departments\/account-management"},{"careers_greenhouse_team":"Customer Success","careers_department_page":"https:\/\/heap.io\/careers\/departments\/customer-success"},{"careers_greenhouse_team":"Engineering","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Design","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Product","careers_department_page":"https:\/\/heap.io\/careers\/departments\/engineering-product-and-design"},{"careers_greenhouse_team":"Marketing","careers_department_page":"https:\/\/heap.io\/careers\/departments\/marketing"},{"careers_greenhouse_team":"People","careers_department_page":"https:\/\/heap.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Finance and Operations ","careers_department_page":"https:\/\/heap.io\/careers\/departments\/ga"},{"careers_greenhouse_team":"Sales","careers_department_page":"https:\/\/heap.io\/careers\/departments\/sales"},{"careers_greenhouse_team":"Sales Development","careers_department_page":"https:\/\/heap.io\/careers\/departments\/sales"}];
-/* ]]> */
-</script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/new-tab.min.js"></script>
-<script type="text/javascript" src="js/wp-embed.min.js"></script>
-			<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-cff49190019d29d717a","applicationID":"241438284","transactionName":"YwFbNhYAWUZXVEZaCVpLeAEQCFhbGUdTVAM=","queueTime":0,"applicationTime":496,"atts":"T0ZYQF4aSkg=","errorBeacon":"bam.nr-data.net","agent":""}</script></div></div></body>
+            </section>
+            
+        </main>
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="ns.html" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<footer>
+    
+    <div class="wrapper">
+        <a href="mailto:hello@estudionk.com" class="email c-grey hoverable hover-text"><span class="hover-before" data-text="hello@estudionk.com"></span><span>hello@estudionk.com</span></a>
+
+        <div class="socials c-lightgrey desktop">
+            <a class="hoverable" href="https://www.facebook.com/elestudionk" target="_blank">Facebook</a>
+            <a class="hoverable" href="https://www.instagram.com/elestudionk/" target="_blank">Instagram</a>
+            <a class="hoverable" href="https://www.behance.net/elestudionk" target="_blank">Behance</a>
+            <a class="hoverable" href="https://www.youtube.com/channel/UCELrWDFw2ZuwWkKlJrMXuoA" target="_blank">YouTube</a>
+            <a class="hoverable" href="https://www.twitter.com/elestudionk" target="_blank">Twitter</a>
+            <a class="hoverable" href="https://www.linkedin.com/company/elestudionk/" target="_blank">LinkedIn</a>
+        </div>
+
+        <div class="socials c-lightgrey mobile">
+                <a href="https://www.facebook.com/elestudionk" target="_blank">Fb</a>
+                <a href="https://www.instagram.com/elestudionk/" target="_blank">Ig</a>
+                <a href="https://www.behance.net/elestudionk" target="_blank">Be</a>
+                <a href="https://www.youtube.com/channel/UCELrWDFw2ZuwWkKlJrMXuoA" target="_blank">Yt</a>
+                <a href="https://www.twitter.com/elestudionk" target="_blank">Tw</a>
+                <a href="https://www.linkedin.com/company/elestudionk/" target="_blank">In</a>
+            </div>
+        
+        <div class="down">
+            <div class="copy c-lightgrey">
+                <h2><strong class="c-grey">® 2006 <div class="line"></div> 2021</strong> <span class="mobile-f">All rights reserved. </span>
+                    <a class="hoverable link" href="/en/terms-and-conditions">Terms and Conditions.</a>
+                    <a class="hoverable link" href="/en/privacy">Privacy.</a>
+                </h2>
+            </div>
+            <div class="newsletter c-lightgrey hoverable">
+                <div id="news1"><a>Subscribe to news/nk.</a></div>
+                <div id="news2">
+                    <input placeholder="Enter your e-mail">
+                    <div class="button c-green">
+                        <span data-text="Subscribe">Subscribe</span>
+                    </div>
+                </div>
+                <div id="news3"><a>Thanks for subscribe :)</a></div>
+            </div>
+            <a class="hoverable link hover-text next" href="/en/works">
+                <span data-text="see works" class="hover-before"></span>
+                <span>see works</span>
+            </a>
+        </div>
+    </div>
+    
+</footer>
+
+<div class="cookies">
+    <p class="c-lightgrey desktop">If you think cookies are just cookies 🍪, please read the following <a href="/politicas-de-privacidad?cookies=true" class="c-green hoverable link inline-link">link</a>, if you don't, just <a id="close-cookies" class="c-green close-cookies hoverable inline-link">hide</a> this message.</p>
+    <p class="c-lightgrey mobile">Obviously this site use <a href="/privacy?cookies=true" class="c-green hoverable link inline-link">cookies</a> 🍪 , <a id="close-cookies" class="close-cookies c-green hoverable inline-link">hide</a>.</p>
+</div>
+
+<div id="pointer">
+    <div class="main-circle"></div>
+    <div class="draggable">
+        <svg width="60" height="60">
+            <circle class="drag-circle" cx="30" cy="30" r="25"/>
+        </svg>
+    </div>
+    <div class="arrows">
+        <i class="fal fa-angle-left"></i>
+        <i class="fal fa-angle-right"></i>
+    </div>    
+    <!-- <div class="loading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" stroke="#58ead2" class="svg replaced-svg"> <g fill="none" fill-rule="evenodd"> <g transform="translate(1 1)" stroke-width="2"> <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle> <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(197.234 18 18)"> <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform> </path> </g> </g> </svg>
+    </div> -->
+    <div class="text"><span></span></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/plugins.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="js/limit.text.min.js"></script>
+    </body>
+
 </html>
