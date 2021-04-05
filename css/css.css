@@ -110,3 +110,33 @@
 #menu {
   position: absolute;
 }
+
+
+#menu-contacto .c-green {
+  height: 50px;
+  line-height: 50px;
+  /* position: absolute;
+  bottom: -13px; */
+  display: flex;
+  align-items: center;
+  /* overflow-y: visible; */
+  /* padding-bottom: 55px;
+  margin-top:0; */
+  color: #ff415d;
+}
+
+.c-green .word {
+  /* z-index: 100; */
+  border-bottom: 3px solid rgb(255, 65, 93);
+  line-height: 30px !important;
+}
+
+#menu-contacto::after {
+  display:none;
+}
+
+#menu-contacto .c-green::after {
+  margin-top: 10px;
+  bottom: -6px;
+  /* display: none; */
+}
